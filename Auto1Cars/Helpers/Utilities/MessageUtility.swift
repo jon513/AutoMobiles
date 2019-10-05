@@ -1,0 +1,20 @@
+//
+//  MessageUtility.swift
+//  Auto1Test
+//
+//  Created by Amir Abbas Kashani on 9/10/19.
+//  Copyright © 2019 Auto1. All rights reserved.
+//
+
+import UIKit
+
+class MessageUtility: NSObject
+{
+    public static func createASimpleAlert(title: String = "", message: String = "") -> UIAlertController
+    {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        return alertController
+    }
+}

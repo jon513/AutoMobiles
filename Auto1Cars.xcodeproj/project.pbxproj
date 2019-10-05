@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,19 @@
 		A25B50A62348892000B68794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B50A42348892000B68794 /* LaunchScreen.storyboard */; };
 		A25B50B12348892000B68794 /* Auto1CarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50B02348892000B68794 /* Auto1CarsTests.swift */; };
 		A25B50BC2348892000B68794 /* Auto1CarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50BB2348892000B68794 /* Auto1CarsUITests.swift */; };
+		A25B50CD23488D5300B68794 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50CC23488D5300B68794 /* ApplicationService.swift */; };
+		A25B50D023488D7600B68794 /* LoggerAppDelegateServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50CF23488D7600B68794 /* LoggerAppDelegateServices.swift */; };
+		A25B50E223488DA800B68794 /* TableViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D323488DA800B68794 /* TableViewUtility.swift */; };
+		A25B50E323488DA800B68794 /* StringUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D423488DA800B68794 /* StringUtility.swift */; };
+		A25B50E423488DA800B68794 /* ViewControlleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D523488DA800B68794 /* ViewControlleUtility.swift */; };
+		A25B50E523488DA800B68794 /* DataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D623488DA800B68794 /* DataUtility.swift */; };
+		A25B50E623488DA800B68794 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D823488DA800B68794 /* Constants.swift */; };
+		A25B50E723488DA800B68794 /* AuthenticationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D923488DA800B68794 /* AuthenticationBuilder.swift */; };
+		A25B50E823488DA800B68794 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DA23488DA800B68794 /* Logger.swift */; };
+		A25B50E923488DA800B68794 /* MessageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DB23488DA800B68794 /* MessageUtility.swift */; };
+		A25B50EA23488DA800B68794 /* NotificationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DC23488DA800B68794 /* NotificationUtility.swift */; };
+		A25B50EB23488DA800B68794 /* LoadingUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DD23488DA800B68794 /* LoadingUtility.swift */; };
+		A25B50ED23488DA800B68794 /* NibLoadableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */; };
 		BD91352224A9ADFB7EDF4D1C /* Pods_Auto1CarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751C18EE4385C3DA9C8AA3D /* Pods_Auto1CarsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +70,19 @@
 		A25B50B72348892000B68794 /* Auto1CarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Auto1CarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B50BB2348892000B68794 /* Auto1CarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auto1CarsUITests.swift; sourceTree = "<group>"; };
 		A25B50BD2348892000B68794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A25B50CC23488D5300B68794 /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		A25B50CF23488D7600B68794 /* LoggerAppDelegateServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerAppDelegateServices.swift; sourceTree = "<group>"; };
+		A25B50D323488DA800B68794 /* TableViewUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewUtility.swift; sourceTree = "<group>"; };
+		A25B50D423488DA800B68794 /* StringUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtility.swift; sourceTree = "<group>"; };
+		A25B50D523488DA800B68794 /* ViewControlleUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControlleUtility.swift; sourceTree = "<group>"; };
+		A25B50D623488DA800B68794 /* DataUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
+		A25B50D823488DA800B68794 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A25B50D923488DA800B68794 /* AuthenticationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationBuilder.swift; sourceTree = "<group>"; };
+		A25B50DA23488DA800B68794 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		A25B50DB23488DA800B68794 /* MessageUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageUtility.swift; sourceTree = "<group>"; };
+		A25B50DC23488DA800B68794 /* NotificationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUtility.swift; sourceTree = "<group>"; };
+		A25B50DD23488DA800B68794 /* LoadingUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingUtility.swift; sourceTree = "<group>"; };
+		A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableProtocol.swift; sourceTree = "<group>"; };
 		B33765FB7F1FC8E108DEBADD /* Pods-Auto1Cars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1Cars.release.xcconfig"; path = "Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars.release.xcconfig"; sourceTree = "<group>"; };
 		BB17F2B0440B69FE153DB931 /* Pods-Auto1CarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsTests.release.xcconfig"; path = "Target Support Files/Pods-Auto1CarsTests/Pods-Auto1CarsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +125,6 @@
 				34EBAE4C968B267D43EAB1B2 /* Pods-Auto1CarsUITests.debug.xcconfig */,
 				5B9B2062475EB25C5B378C52 /* Pods-Auto1CarsUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,7 +153,9 @@
 		A25B509A2348891D00B68794 /* Auto1Cars */ = {
 			isa = PBXGroup;
 			children = (
-				A25B509D2348891D00B68794 /* ViewController.swift */,
+				A25B50D123488DA800B68794 /* Helpers */,
+				A25B50CB23488D2F00B68794 /* ApplicationDelegates */,
+				A25B50CA23488D1F00B68794 /* Views */,
 				A25B50C92348892D00B68794 /* SupportingFiles */,
 			);
 			path = Auto1Cars;
@@ -155,13 +182,80 @@
 		A25B50C92348892D00B68794 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				A25B509B2348891D00B68794 /* AppDelegate.swift */,
 				A25B509F2348891D00B68794 /* Main.storyboard */,
 				A25B50A22348892000B68794 /* Assets.xcassets */,
 				A25B50A42348892000B68794 /* LaunchScreen.storyboard */,
 				A25B50A72348892000B68794 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A25B50CA23488D1F00B68794 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A25B509D2348891D00B68794 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A25B50CB23488D2F00B68794 /* ApplicationDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				A25B509B2348891D00B68794 /* AppDelegate.swift */,
+				A25B50CE23488D6D00B68794 /* Services */,
+			);
+			path = ApplicationDelegates;
+			sourceTree = "<group>";
+		};
+		A25B50CE23488D6D00B68794 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50CC23488D5300B68794 /* ApplicationService.swift */,
+				A25B50CF23488D7600B68794 /* LoggerAppDelegateServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A25B50D123488DA800B68794 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50D223488DA800B68794 /* Extensions */,
+				A25B50D723488DA800B68794 /* Utilities */,
+				A25B50E023488DA800B68794 /* Protocols */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A25B50D223488DA800B68794 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50D323488DA800B68794 /* TableViewUtility.swift */,
+				A25B50D423488DA800B68794 /* StringUtility.swift */,
+				A25B50D523488DA800B68794 /* ViewControlleUtility.swift */,
+				A25B50D623488DA800B68794 /* DataUtility.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A25B50D723488DA800B68794 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50D823488DA800B68794 /* Constants.swift */,
+				A25B50D923488DA800B68794 /* AuthenticationBuilder.swift */,
+				A25B50DA23488DA800B68794 /* Logger.swift */,
+				A25B50DB23488DA800B68794 /* MessageUtility.swift */,
+				A25B50DC23488DA800B68794 /* NotificationUtility.swift */,
+				A25B50DD23488DA800B68794 /* LoadingUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A25B50E023488DA800B68794 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		DA7E5998B722098152DD0548 /* Frameworks */ = {
@@ -395,8 +489,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25B50E923488DA800B68794 /* MessageUtility.swift in Sources */,
 				A25B509E2348891D00B68794 /* ViewController.swift in Sources */,
+				A25B50E823488DA800B68794 /* Logger.swift in Sources */,
+				A25B50ED23488DA800B68794 /* NibLoadableProtocol.swift in Sources */,
+				A25B50CD23488D5300B68794 /* ApplicationService.swift in Sources */,
+				A25B50EA23488DA800B68794 /* NotificationUtility.swift in Sources */,
+				A25B50EB23488DA800B68794 /* LoadingUtility.swift in Sources */,
+				A25B50E523488DA800B68794 /* DataUtility.swift in Sources */,
+				A25B50E223488DA800B68794 /* TableViewUtility.swift in Sources */,
+				A25B50D023488D7600B68794 /* LoggerAppDelegateServices.swift in Sources */,
+				A25B50E423488DA800B68794 /* ViewControlleUtility.swift in Sources */,
 				A25B509C2348891D00B68794 /* AppDelegate.swift in Sources */,
+				A25B50E323488DA800B68794 /* StringUtility.swift in Sources */,
+				A25B50E623488DA800B68794 /* Constants.swift in Sources */,
+				A25B50E723488DA800B68794 /* AuthenticationBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Auto1Cars/Info.plist;
+				INFOPLIST_FILE = Auto1Cars/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,7 +688,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Auto1.Auto1Cars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -591,7 +698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Auto1Cars/Info.plist;
+				INFOPLIST_FILE = Auto1Cars/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -599,7 +706,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Auto1.Auto1Cars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
