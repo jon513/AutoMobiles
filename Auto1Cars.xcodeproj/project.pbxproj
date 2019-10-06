@@ -29,6 +29,17 @@
 		A25B50EA23488DA800B68794 /* NotificationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DC23488DA800B68794 /* NotificationUtility.swift */; };
 		A25B50EB23488DA800B68794 /* LoadingUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DD23488DA800B68794 /* LoadingUtility.swift */; };
 		A25B50ED23488DA800B68794 /* NibLoadableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */; };
+		A25B50FF23488FE900B68794 /* ResuaurantEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F123488FE900B68794 /* ResuaurantEndPoints.swift */; };
+		A25B510023488FE900B68794 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F323488FE900B68794 /* ParameterEncoding.swift */; };
+		A25B510123488FE900B68794 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F423488FE900B68794 /* URLParameterEncoding.swift */; };
+		A25B510223488FE900B68794 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F523488FE900B68794 /* JSONParameterEncoder.swift */; };
+		A25B510423488FE900B68794 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F923488FE900B68794 /* NetworkManager.swift */; };
+		A25B510523488FE900B68794 /* EndPointTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50FB23488FE900B68794 /* EndPointTypeProtocol.swift */; };
+		A25B510623488FE900B68794 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50FC23488FE900B68794 /* HTTPMethod.swift */; };
+		A25B510723488FE900B68794 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50FD23488FE900B68794 /* Router.swift */; };
+		A25B510823488FE900B68794 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50FE23488FE900B68794 /* HTTPHeaders.swift */; };
+		A25B510C2348B7C600B68794 /* Manufacturers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B510A2348B7C600B68794 /* Manufacturers.swift */; };
+		A25B510F2349D5BE00B68794 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B510E2349D5BE00B68794 /* Cars.swift */; };
 		BD91352224A9ADFB7EDF4D1C /* Pods_Auto1CarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751C18EE4385C3DA9C8AA3D /* Pods_Auto1CarsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +94,17 @@
 		A25B50DC23488DA800B68794 /* NotificationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUtility.swift; sourceTree = "<group>"; };
 		A25B50DD23488DA800B68794 /* LoadingUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingUtility.swift; sourceTree = "<group>"; };
 		A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableProtocol.swift; sourceTree = "<group>"; };
+		A25B50F123488FE900B68794 /* ResuaurantEndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResuaurantEndPoints.swift; sourceTree = "<group>"; };
+		A25B50F323488FE900B68794 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		A25B50F423488FE900B68794 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		A25B50F523488FE900B68794 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		A25B50F923488FE900B68794 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A25B50FB23488FE900B68794 /* EndPointTypeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointTypeProtocol.swift; sourceTree = "<group>"; };
+		A25B50FC23488FE900B68794 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A25B50FD23488FE900B68794 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A25B50FE23488FE900B68794 /* HTTPHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		A25B510A2348B7C600B68794 /* Manufacturers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manufacturers.swift; sourceTree = "<group>"; };
+		A25B510E2349D5BE00B68794 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		B33765FB7F1FC8E108DEBADD /* Pods-Auto1Cars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1Cars.release.xcconfig"; path = "Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars.release.xcconfig"; sourceTree = "<group>"; };
 		BB17F2B0440B69FE153DB931 /* Pods-Auto1CarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsTests.release.xcconfig"; path = "Target Support Files/Pods-Auto1CarsTests/Pods-Auto1CarsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +175,8 @@
 		A25B509A2348891D00B68794 /* Auto1Cars */ = {
 			isa = PBXGroup;
 			children = (
+				A25B51092348B7B400B68794 /* Models */,
+				A25B50EF23488FE900B68794 /* Networking */,
 				A25B50D123488DA800B68794 /* Helpers */,
 				A25B50CB23488D2F00B68794 /* ApplicationDelegates */,
 				A25B50CA23488D1F00B68794 /* Views */,
@@ -219,6 +243,7 @@
 		A25B50D123488DA800B68794 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A25B50EE23488FCE00B68794 /* New Group */,
 				A25B50D223488DA800B68794 /* Extensions */,
 				A25B50D723488DA800B68794 /* Utilities */,
 				A25B50E023488DA800B68794 /* Protocols */,
@@ -256,6 +281,70 @@
 				A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A25B50EE23488FCE00B68794 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A25B50EF23488FE900B68794 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50F023488FE900B68794 /* EndPoints */,
+				A25B50F223488FE900B68794 /* Encoding */,
+				A25B50F823488FE900B68794 /* Manager */,
+				A25B50FA23488FE900B68794 /* Base */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A25B50F023488FE900B68794 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50F123488FE900B68794 /* ResuaurantEndPoints.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		A25B50F223488FE900B68794 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50F323488FE900B68794 /* ParameterEncoding.swift */,
+				A25B50F423488FE900B68794 /* URLParameterEncoding.swift */,
+				A25B50F523488FE900B68794 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		A25B50F823488FE900B68794 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50F923488FE900B68794 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A25B50FA23488FE900B68794 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50FB23488FE900B68794 /* EndPointTypeProtocol.swift */,
+				A25B50FC23488FE900B68794 /* HTTPMethod.swift */,
+				A25B50FD23488FE900B68794 /* Router.swift */,
+				A25B50FE23488FE900B68794 /* HTTPHeaders.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A25B51092348B7B400B68794 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A25B510A2348B7C600B68794 /* Manufacturers.swift */,
+				A25B510E2349D5BE00B68794 /* Cars.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DA7E5998B722098152DD0548 /* Frameworks */ = {
@@ -491,19 +580,30 @@
 			files = (
 				A25B50E923488DA800B68794 /* MessageUtility.swift in Sources */,
 				A25B509E2348891D00B68794 /* ViewController.swift in Sources */,
+				A25B50FF23488FE900B68794 /* ResuaurantEndPoints.swift in Sources */,
+				A25B510423488FE900B68794 /* NetworkManager.swift in Sources */,
 				A25B50E823488DA800B68794 /* Logger.swift in Sources */,
 				A25B50ED23488DA800B68794 /* NibLoadableProtocol.swift in Sources */,
 				A25B50CD23488D5300B68794 /* ApplicationService.swift in Sources */,
+				A25B510523488FE900B68794 /* EndPointTypeProtocol.swift in Sources */,
+				A25B510C2348B7C600B68794 /* Manufacturers.swift in Sources */,
 				A25B50EA23488DA800B68794 /* NotificationUtility.swift in Sources */,
+				A25B510023488FE900B68794 /* ParameterEncoding.swift in Sources */,
 				A25B50EB23488DA800B68794 /* LoadingUtility.swift in Sources */,
+				A25B510F2349D5BE00B68794 /* Cars.swift in Sources */,
 				A25B50E523488DA800B68794 /* DataUtility.swift in Sources */,
 				A25B50E223488DA800B68794 /* TableViewUtility.swift in Sources */,
 				A25B50D023488D7600B68794 /* LoggerAppDelegateServices.swift in Sources */,
 				A25B50E423488DA800B68794 /* ViewControlleUtility.swift in Sources */,
+				A25B510723488FE900B68794 /* Router.swift in Sources */,
 				A25B509C2348891D00B68794 /* AppDelegate.swift in Sources */,
 				A25B50E323488DA800B68794 /* StringUtility.swift in Sources */,
 				A25B50E623488DA800B68794 /* Constants.swift in Sources */,
+				A25B510123488FE900B68794 /* URLParameterEncoding.swift in Sources */,
+				A25B510623488FE900B68794 /* HTTPMethod.swift in Sources */,
+				A25B510823488FE900B68794 /* HTTPHeaders.swift in Sources */,
 				A25B50E723488DA800B68794 /* AuthenticationBuilder.swift in Sources */,
+				A25B510223488FE900B68794 /* JSONParameterEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
