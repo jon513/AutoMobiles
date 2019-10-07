@@ -25,7 +25,7 @@ extension AuthenticationBuilder
 {
     public struct constantsForTest
     {
-        static let key = K.key
+        static let wa_value = K.key
         static let wa_key = K.wa_key
     }
 

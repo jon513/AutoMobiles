@@ -14,8 +14,8 @@ enum NetworkEnvironment {
 }
 
 public enum Auto1Api {
-    case manufacturer(page: Int, pageSize: Int)
-    case mainTypes(page: Int, pageSize: Int)
+    case manufacturers(page: Int, pageSize: Int, authenticationParams: Parameters)
+    case cars(manufacturerId: String ,page: Int, pageSize: Int, authenticationParams: Parameters)
 }
 
 extension Auto1Api: EndPointTypeProtocol {
@@ -34,9 +34,9 @@ extension Auto1Api: EndPointTypeProtocol {
     
     var path: String {
         switch self {
-        case .manufacturer:
+        case .manufacturers:
             return "car-types/manufacturer"
-        case .mainTypes:
+        case .cars:
             return "car-types/main-types"
         }
     }
@@ -45,10 +45,18 @@ extension Auto1Api: EndPointTypeProtocol {
         return .get
     }
     
+    
     var task: HTTPTask {
+        let pageKey = "page"
+        let sizeKey = "pageSize"
+        let manufacturerKey = "manufacturer"
         switch self {
-        default:
-            return .request
+        case .cars(let manufacturerId, let page, let pageSize, let authenticationParams):
+            let urlParams = [manufacturerKey:manufacturerId, pageKey: page, sizeKey: pageSize] as [String : Any]
+            return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: urlParams, authenticationParams: authenticationParams)
+        case .manufacturers(let page, let pageSize, let authenticationParams):
+            let urlParams = [pageKey: page, sizeKey: pageSize]
+            return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: urlParams, authenticationParams: authenticationParams)
         }
     }
     

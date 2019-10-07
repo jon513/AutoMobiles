@@ -50,30 +50,36 @@ class Router<EndPoint: EndPointTypeProtocol>: NetworkRouter
         do {
             switch route.task {
             case .request:
-                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                try configureParameters(bodyEncoding: .urlEncoding, request: &request,
-                                        authenticationParams: authenticationParams)
+                try configureParameters(bodyEncoding: .jsonEncoding, request: &request)
             case .requestParameters(let bodyParameters,
                                     let bodyEncoding,
-                                    let urlParameters):
+                                    let urlParameters,
+                                    let authenticationParams):
+                
+                var finalParams = urlParameters 
+                for (k,v) in authenticationParams {
+                    finalParams[k] = v
+                }
                 
                 try configureParameters(bodyParameters: bodyParameters,
                                         bodyEncoding: bodyEncoding,
-                                        urlParameters: urlParameters,
-                                        request: &request,
-                                        authenticationParams: authenticationParams)
+                                        urlParameters: finalParams,
+                                        request: &request)
                 
             case .requestParametersAndHeaders(let bodyParameters,
                                               let bodyEncoding,
                                               let urlParameters,
+                                              let authenticationParams,
                                               let additionalHeaders):
-                
+                var finalParams = urlParameters 
+                for (k,v) in authenticationParams {
+                    finalParams[k] = v
+                }
                 addAdditionalHeaders(additionalHeaders, request: &request)
                 try configureParameters(bodyParameters: bodyParameters,
                                         bodyEncoding: bodyEncoding,
-                                        urlParameters: urlParameters,
-                                        request: &request,
-                                        authenticationParams: authenticationParams)
+                                        urlParameters: finalParams,
+                                        request: &request)
             }
             return request
         } catch {
@@ -84,17 +90,13 @@ class Router<EndPoint: EndPointTypeProtocol>: NetworkRouter
     fileprivate func configureParameters(bodyParameters: Parameters? = nil,
                                          bodyEncoding: ParameterEncoding = ParameterEncoding.urlAndJsonEncoding,
                                          urlParameters: Parameters? = nil,
-                                         request: inout URLRequest,
-                                         authenticationParams: [String:String]) throws {
+                                         requestParameters: Parameters? = nil,
+                                         request: inout URLRequest) throws {
         do {
             
-            var finalUrlParameters = urlParameters ?? Parameters()
-            for (key, value) in authenticationParams {
-                finalUrlParameters[key] = value
-            }
             try bodyEncoding.encode(urlRequest: &request,
                                     bodyParameters: bodyParameters,
-                                    urlParameters: finalUrlParameters)
+                                    urlParameters: urlParameters)
         } catch {
             throw error
         }

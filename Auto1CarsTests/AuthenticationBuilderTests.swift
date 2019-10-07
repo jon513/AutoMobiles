@@ -13,11 +13,12 @@ class AuthenticationBuilderTests: XCTestCase {
     
     func testBuildCorrctApiKey()
     {
-        XCTAssertNil(AuthenticationBuilder.constantsForTest.key)
+        XCTAssertNotNil(AuthenticationBuilder.constantsForTest.wa_key)
         let params = AuthenticationBuilder.buildApiKeyParams()
-        let value = params[AuthenticationBuilder.constantsForTest.key]
-        XCTAssert(params.keys.contains(AuthenticationBuilder.constantsForTest.key))
-        XCTAssertNil(value)
+        XCTAssert(params.keys.contains(AuthenticationBuilder.constantsForTest.wa_key))
+        
+        let value = params[AuthenticationBuilder.constantsForTest.wa_key]
+        XCTAssertNotNil(value)
         XCTAssertNotEqual(value, AuthenticationBuilder.constantsForTest.wa_key)
     }
 }

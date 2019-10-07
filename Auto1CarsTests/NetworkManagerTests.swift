@@ -32,11 +32,27 @@ class NetworkManagerTests: XCTestCase
             XCTAssertNil(error, error ?? "")
             XCTAssertNotNil(manufacturers)
             XCTAssertNotNil(manufacturers?.wkda)
-            
+            XCTAssertEqual(manufacturers?.wkda?.count, 10, "number of fetched manufactureres is not 10")
             getManufactureresExpectation.fulfill()
         }
         
         wait(for: [getManufactureresExpectation], timeout: 10)
+    }
+    
+    func testThatNetworkManagerGetCars()
+    {
+        let getCarsExpectation = XCTestExpectation(description: "Wait for Cars services")
+        
+        networkManager.getCars(forManufacturerId: "107", forPage: 0) { (cars, error) in
+            XCTAssertNil(error, error ?? "")
+            XCTAssertNotNil(cars)
+            XCTAssertNotNil(cars?.wkda)
+            XCTAssertNotEqual(cars?.wkda?.count, 10, "number of fetched manufactureres is not 10")
+            getCarsExpectation.fulfill()
+        }
+        
+        wait(for: [getCarsExpectation], timeout: 10)
+
     }
 
 }

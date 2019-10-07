@@ -35,9 +35,10 @@ struct NetworkManager
         self.authenticationParams = authenticationParams
     }
     
-    func getManufacturers(forPage page: Int, completion: @escaping (_ manufacturers: Manufacturers?,_ error: String?)->())
+    func getManufacturers(forPage page: Int, pageSize: Int = 10, completion: @escaping (_ manufacturers: Manufacturers?, _ error: String?)->())
     {
-        Auto1Router.request(.manufacturer(page: page, pageSize: 10), authenticationParams: authenticationParams) { (data, urlResponse, error) in
+        Auto1Router.request(.manufacturers(page: page, pageSize: 10, authenticationParams: authenticationParams), authenticationParams: authenticationParams)
+        { (data, urlResponse, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
                 return
@@ -56,15 +57,7 @@ struct NetworkManager
                             completion(nil, NetworkResponse.noData.rawValue)
                             return
                     }
-                    var wkdaModels = [Wkda]()
-                    for item in wkdaJson {
-                        if var wkda = Wkda(JSON: [String:String]()) {
-                            wkda.key = item.key
-                            wkda.value = item.value
-                            wkdaModels.append(wkda)
-                        }
-                    }
-                    manufacturers.wkda = wkdaModels
+                    manufacturers.wkda = self.createWkdaArray(wkdaJson)
                     completion(manufacturers, nil)
                     return
                 case .failure(let networkFailureError):
@@ -72,6 +65,52 @@ struct NetworkManager
                 }
             }
         }
+    }
+    
+  
+    
+    func getCars(forManufacturerId manufacturerId: String, forPage page: Int, pageSize: Int = 10, completion: @escaping (_ manufacturers: Cars?,_ error: String?)->())
+    {
+        Auto1Router.request(.cars(manufacturerId: manufacturerId, page: page, pageSize: pageSize, authenticationParams: authenticationParams), authenticationParams: authenticationParams)
+        { (data, urlResponse, error) in
+            guard error == nil else {
+                completion(nil, error?.localizedDescription)
+                return
+            }
+            if let response = urlResponse as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                    
+                case .success:
+                    guard let responseData = data,
+                        let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
+                            as? Dictionary <String, AnyObject>,
+                        var cars = Cars(JSON: json),
+                        let wkdaJson = json["wkda"] as? Dictionary<String, String>
+                        else {
+                            completion(nil, NetworkResponse.noData.rawValue)
+                            return
+                    }
+                    cars.wkda = self.createWkdaArray(wkdaJson)
+                    completion(cars, nil)
+                    return
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
+    
+    private func createWkdaArray(_ wkdaJson: [String : String]) -> [Wkda] {
+        var wkdas = [Wkda]()
+        for item in wkdaJson {
+            if var wkda = Wkda(JSON: [String:String]()) {
+                wkda.key = item.key
+                wkda.value = item.value
+                wkdas.append(wkda)
+            }
+        }
+        return wkdas
     }
     
     private func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
