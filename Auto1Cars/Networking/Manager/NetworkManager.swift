@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 enum Result<String>{
     case success
@@ -49,10 +50,21 @@ struct NetworkManager
                     guard let responseData = data,
                         let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
                             as? Dictionary <String, AnyObject>,
-                        let manufacturers = Manufacturers(JSON: json) else {
+                        var manufacturers = Manufacturers(JSON: json),
+                        let wkdaJson = json["wkda"] as? Dictionary<String, String>
+                        else {
                             completion(nil, NetworkResponse.noData.rawValue)
                             return
                     }
+                    var wkdaModels = [Wkda]()
+                    for item in wkdaJson {
+                        if var wkda = Wkda(JSON: [String:String]()) {
+                            wkda.key = item.key
+                            wkda.value = item.value
+                            wkdaModels.append(wkda)
+                        }
+                    }
+                    manufacturers.wkda = wkdaModels
                     completion(manufacturers, nil)
                     return
                 case .failure(let networkFailureError):

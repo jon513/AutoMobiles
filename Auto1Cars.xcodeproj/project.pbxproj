@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		2BF5662CAEA91CFE7B5EC745 /* Pods_Auto1CarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533B1A62617C45CA70E1ABFF /* Pods_Auto1CarsTests.framework */; };
 		60069E04EE41668DF6EBF38B /* Pods_Auto1Cars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A97D4B722EF7D4D2A8D2158 /* Pods_Auto1Cars.framework */; };
+		6B9478D5234B6C5500AEE50F /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */; };
+		6B9478D7234B785D00AEE50F /* Wkda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478D6234B785D00AEE50F /* Wkda.swift */; };
 		A25B509C2348891D00B68794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509B2348891D00B68794 /* AppDelegate.swift */; };
 		A25B509E2348891D00B68794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509D2348891D00B68794 /* ViewController.swift */; };
 		A25B50A12348891D00B68794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B509F2348891D00B68794 /* Main.storyboard */; };
 		A25B50A32348892000B68794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25B50A22348892000B68794 /* Assets.xcassets */; };
 		A25B50A62348892000B68794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B50A42348892000B68794 /* LaunchScreen.storyboard */; };
-		A25B50B12348892000B68794 /* Auto1CarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50B02348892000B68794 /* Auto1CarsTests.swift */; };
+		A25B50B12348892000B68794 /* AuthenticationBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50B02348892000B68794 /* AuthenticationBuilderTests.swift */; };
 		A25B50BC2348892000B68794 /* Auto1CarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50BB2348892000B68794 /* Auto1CarsUITests.swift */; };
 		A25B50CD23488D5300B68794 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50CC23488D5300B68794 /* ApplicationService.swift */; };
 		A25B50D023488D7600B68794 /* LoggerAppDelegateServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50CF23488D7600B68794 /* LoggerAppDelegateServices.swift */; };
@@ -68,6 +70,8 @@
 		52CBDD20EC99C52E70A62288 /* Pods-Auto1Cars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1Cars.debug.xcconfig"; path = "Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars.debug.xcconfig"; sourceTree = "<group>"; };
 		533B1A62617C45CA70E1ABFF /* Pods_Auto1CarsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auto1CarsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9B2062475EB25C5B378C52 /* Pods-Auto1CarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsUITests.release.xcconfig"; path = "Target Support Files/Pods-Auto1CarsUITests/Pods-Auto1CarsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		6B9478D6234B785D00AEE50F /* Wkda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wkda.swift; sourceTree = "<group>"; };
 		A25B50982348891D00B68794 /* Auto1Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auto1Cars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B509B2348891D00B68794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25B509D2348891D00B68794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +80,7 @@
 		A25B50A52348892000B68794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A25B50A72348892000B68794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25B50AC2348892000B68794 /* Auto1CarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Auto1CarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A25B50B02348892000B68794 /* Auto1CarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auto1CarsTests.swift; sourceTree = "<group>"; };
+		A25B50B02348892000B68794 /* AuthenticationBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationBuilderTests.swift; sourceTree = "<group>"; };
 		A25B50B22348892000B68794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25B50B72348892000B68794 /* Auto1CarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Auto1CarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B50BB2348892000B68794 /* Auto1CarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auto1CarsUITests.swift; sourceTree = "<group>"; };
@@ -188,8 +192,9 @@
 		A25B50AF2348892000B68794 /* Auto1CarsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A25B50B02348892000B68794 /* Auto1CarsTests.swift */,
+				A25B50B02348892000B68794 /* AuthenticationBuilderTests.swift */,
 				A25B50B22348892000B68794 /* Info.plist */,
+				6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */,
 			);
 			path = Auto1CarsTests;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 			children = (
 				A25B510A2348B7C600B68794 /* Manufacturers.swift */,
 				A25B510E2349D5BE00B68794 /* Cars.swift */,
+				6B9478D6234B785D00AEE50F /* Wkda.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -590,6 +596,7 @@
 				A25B50EA23488DA800B68794 /* NotificationUtility.swift in Sources */,
 				A25B510023488FE900B68794 /* ParameterEncoding.swift in Sources */,
 				A25B50EB23488DA800B68794 /* LoadingUtility.swift in Sources */,
+				6B9478D7234B785D00AEE50F /* Wkda.swift in Sources */,
 				A25B510F2349D5BE00B68794 /* Cars.swift in Sources */,
 				A25B50E523488DA800B68794 /* DataUtility.swift in Sources */,
 				A25B50E223488DA800B68794 /* TableViewUtility.swift in Sources */,
@@ -611,7 +618,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25B50B12348892000B68794 /* Auto1CarsTests.swift in Sources */,
+				6B9478D5234B6C5500AEE50F /* NetworkManagerTests.swift in Sources */,
+				A25B50B12348892000B68794 /* AuthenticationBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,12 +788,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XD3TB93322;
 				INFOPLIST_FILE = Auto1Cars/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Auto1.Auto1Cars;
+				PRODUCT_BUNDLE_IDENTIFIER = aakpro.Auto1.Auto1Cars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -798,12 +807,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XD3TB93322;
 				INFOPLIST_FILE = Auto1Cars/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Auto1.Auto1Cars;
+				PRODUCT_BUNDLE_IDENTIFIER = aakpro.Auto1.Auto1Cars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

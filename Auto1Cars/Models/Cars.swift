@@ -13,7 +13,7 @@ struct Cars : Mappable
     var page : Int?
     var pageSize : Int?
     var totalPageCount : Int?
-    var wkda : Wkda?
+    var wkda : [Wkda]?
     
     init?(map: Map) { }
     

@@ -17,7 +17,7 @@ class AuthenticationBuilder
     
     static func buildApiKeyParams () -> [String:String]
     {
-        fatalError()
+        return [K.wa_key:K.key]
     }
 }
 #if DEBUG
