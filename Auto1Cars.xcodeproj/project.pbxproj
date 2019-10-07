@@ -29,7 +29,7 @@
 		A25B50EA23488DA800B68794 /* NotificationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DC23488DA800B68794 /* NotificationUtility.swift */; };
 		A25B50EB23488DA800B68794 /* LoadingUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DD23488DA800B68794 /* LoadingUtility.swift */; };
 		A25B50ED23488DA800B68794 /* NibLoadableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */; };
-		A25B50FF23488FE900B68794 /* ResuaurantEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F123488FE900B68794 /* ResuaurantEndPoints.swift */; };
+		A25B50FF23488FE900B68794 /* Auto1EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F123488FE900B68794 /* Auto1EndPoints.swift */; };
 		A25B510023488FE900B68794 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F323488FE900B68794 /* ParameterEncoding.swift */; };
 		A25B510123488FE900B68794 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F423488FE900B68794 /* URLParameterEncoding.swift */; };
 		A25B510223488FE900B68794 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F523488FE900B68794 /* JSONParameterEncoder.swift */; };
@@ -94,7 +94,7 @@
 		A25B50DC23488DA800B68794 /* NotificationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUtility.swift; sourceTree = "<group>"; };
 		A25B50DD23488DA800B68794 /* LoadingUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingUtility.swift; sourceTree = "<group>"; };
 		A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableProtocol.swift; sourceTree = "<group>"; };
-		A25B50F123488FE900B68794 /* ResuaurantEndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResuaurantEndPoints.swift; sourceTree = "<group>"; };
+		A25B50F123488FE900B68794 /* Auto1EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auto1EndPoints.swift; sourceTree = "<group>"; };
 		A25B50F323488FE900B68794 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		A25B50F423488FE900B68794 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		A25B50F523488FE900B68794 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 		A25B50F023488FE900B68794 /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
-				A25B50F123488FE900B68794 /* ResuaurantEndPoints.swift */,
+				A25B50F123488FE900B68794 /* Auto1EndPoints.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -580,7 +580,7 @@
 			files = (
 				A25B50E923488DA800B68794 /* MessageUtility.swift in Sources */,
 				A25B509E2348891D00B68794 /* ViewController.swift in Sources */,
-				A25B50FF23488FE900B68794 /* ResuaurantEndPoints.swift in Sources */,
+				A25B50FF23488FE900B68794 /* Auto1EndPoints.swift in Sources */,
 				A25B510423488FE900B68794 /* NetworkManager.swift in Sources */,
 				A25B50E823488DA800B68794 /* Logger.swift in Sources */,
 				A25B50ED23488DA800B68794 /* NibLoadableProtocol.swift in Sources */,

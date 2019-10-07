@@ -89,7 +89,7 @@ class MasterViewController: UIViewController
     public func showEmptyState(type: Empty) {
         switch type {
         case .home:
-            titlelabel.text = "There is not a restuarant!"
+            titlelabel.text = "There is a problem!"
             messageLabel.text = "Please try again later"
         case .fetchingData:
             titlelabel.text = "Loading .... "

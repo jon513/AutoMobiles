@@ -34,6 +34,34 @@ struct NetworkManager
         self.authenticationParams = authenticationParams
     }
     
+    func getManufacturers(forPage page: Int, completion: @escaping (_ manufacturers: Manufacturers?,_ error: String?)->())
+    {
+        Auto1Router.request(.manufacturer(page: page, pageSize: 10), authenticationParams: authenticationParams) { (data, urlResponse, error) in
+            guard error == nil else {
+                completion(nil, error?.localizedDescription)
+                return
+            }
+            if let response = urlResponse as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                    
+                case .success:
+                    guard let responseData = data,
+                        let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
+                            as? Dictionary <String, AnyObject>,
+                        let manufacturers = Manufacturers(JSON: json) else {
+                            completion(nil, NetworkResponse.noData.rawValue)
+                            return
+                    }
+                    completion(manufacturers, nil)
+                    return
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
+    
     private func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
         switch response.statusCode {
         case 200...299: return .success

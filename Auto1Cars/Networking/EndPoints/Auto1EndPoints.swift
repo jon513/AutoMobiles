@@ -14,8 +14,8 @@ enum NetworkEnvironment {
 }
 
 public enum Auto1Api {
-    case manufacturer
-    case mainTypes
+    case manufacturer(page: Int, pageSize: Int)
+    case mainTypes(page: Int, pageSize: Int)
 }
 
 extension Auto1Api: EndPointTypeProtocol {
