@@ -39,8 +39,10 @@ class ManufacturersViewModel: NSObject
     
     var nextPage: Int? {
         guard manufacturers != nil else { return 0 }
-        guard let currentPage = manufacturers?.page else {
-            return nil
+        guard let currentPage = manufacturers?.page,
+            let pageSize = manufacturers?.pageSize,
+            currentPage < pageSize else {
+                return nil
         }
         return currentPage + 1
     }

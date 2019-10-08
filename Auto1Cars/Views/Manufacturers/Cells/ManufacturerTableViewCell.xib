@@ -18,17 +18,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ym5-HG-yoM">
-                        <rect key="frame" x="8" y="8" width="304" height="28"/>
+                        <rect key="frame" x="16" y="8" width="288" height="28"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ym5-HG-yoM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="KrU-9Z-ZdI"/>
+                    <constraint firstItem="ym5-HG-yoM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="KrU-9Z-ZdI"/>
                     <constraint firstItem="ym5-HG-yoM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aiA-ER-TNd"/>
                     <constraint firstAttribute="bottom" secondItem="ym5-HG-yoM" secondAttribute="bottom" constant="8" id="dwM-ou-Aba"/>
-                    <constraint firstAttribute="trailing" secondItem="ym5-HG-yoM" secondAttribute="trailing" constant="8" id="ngs-pm-41P"/>
+                    <constraint firstAttribute="trailing" secondItem="ym5-HG-yoM" secondAttribute="trailing" constant="16" id="ngs-pm-41P"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

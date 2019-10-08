@@ -8,6 +8,10 @@
 
 import UIKit
 
-class LoggerAppDelegateServices: NSObject {
-
+class LoggerAppDelegateServices: ApplicationService
+{
+    public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
+        Logger.initializeLogger()
+        return true
+    }
 }

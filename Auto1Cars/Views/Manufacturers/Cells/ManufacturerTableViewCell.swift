@@ -10,7 +10,12 @@ import UIKit
 
 class ManufacturerTableViewCell: UITableViewCell, NibLoadableProtocol
 {
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.font = .boldSystemFont(ofSize: 18)
+            nameLabel.textColor = .systemBlue
+        }
+    }
     
     func set(manufacturer: Wkda)
     {
