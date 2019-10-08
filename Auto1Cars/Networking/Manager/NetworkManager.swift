@@ -37,7 +37,7 @@ struct NetworkManager
     
     func getManufacturers(forPage page: Int, pageSize: Int = 10, completion: @escaping (_ manufacturers: Manufacturers?, _ error: String?)->())
     {
-        Auto1Router.request(.manufacturers(page: page, pageSize: 10, authenticationParams: authenticationParams), authenticationParams: authenticationParams)
+        Auto1Router.request(.manufacturers(page: page, pageSize: 10, authenticationParams: authenticationParams))
         { (data, urlResponse, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
@@ -67,11 +67,9 @@ struct NetworkManager
         }
     }
     
-  
-    
     func getCars(forManufacturerId manufacturerId: String, forPage page: Int, pageSize: Int = 10, completion: @escaping (_ manufacturers: Cars?,_ error: String?)->())
     {
-        Auto1Router.request(.cars(manufacturerId: manufacturerId, page: page, pageSize: pageSize, authenticationParams: authenticationParams), authenticationParams: authenticationParams)
+        Auto1Router.request(.cars(manufacturerId: manufacturerId, page: page, pageSize: pageSize, authenticationParams: authenticationParams))
         { (data, urlResponse, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
