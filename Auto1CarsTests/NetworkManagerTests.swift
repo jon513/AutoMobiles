@@ -50,9 +50,6 @@ class NetworkManagerTests: XCTestCase
             XCTAssertNotEqual(cars?.wkda?.count, 10, "number of fetched manufactureres is not 10")
             getCarsExpectation.fulfill()
         }
-        
         wait(for: [getCarsExpectation], timeout: 10)
-
     }
-
 }
