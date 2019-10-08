@@ -8,17 +8,63 @@
 
 import UIKit
 
-protocol ManufacturerViewModelProtocol: ViewModelsProtocol {}
+protocol ManufacturerViewModelProtocol: ViewModelsProtocol {
+    func update(title: String)
+}
 
 class ManufacturersViewModel: NSObject
 {
     var delegate: ManufacturerViewModelProtocol
+    static let generalErrorMessage = "There are some problems please try again later"
+    
     init(delegate: ManufacturerViewModelProtocol)
     {
-//        super.init()
         self.delegate = delegate
     }
-    var numberOfRows: Int {
-        return 0
+    
+    func set(newManufacturer: Manufacturers)
+    {
+        guard var currentWkda = manufacturers?.wkda,
+            let newWkda = newManufacturer.wkda else {
+                manufacturers = newManufacturer
+                self.delegate.update()
+                self.delegate.update(title: "Manufacturers")
+                return
+        }
+        currentWkda.append(contentsOf: newWkda)
+        manufacturers = newManufacturer
+        manufacturers?.wkda = currentWkda
+        self.delegate.update()
     }
+    
+    var nextPage: Int? {
+        guard manufacturers != nil else { return 0 }
+        guard let currentPage = manufacturers?.page else {
+            return nil
+        }
+        return currentPage + 1
+    }
+    
+    var manufacturers: Manufacturers? {
+        didSet {
+            self.delegate.update()
+        }
+    }
+    
+    func getManufacturer(at indexPath: IndexPath) -> Wkda
+    {
+        guard let wkda = manufacturers?.wkda?[indexPath.row] else {
+            fatalError("Index out of range exception")
+        }
+        return wkda
+    }
+    
+    var numberOfRows: Int {
+        return manufacturers?.wkda?.count ?? 0
+    }
+    
+    var title: String! {
+        return "loading..."
+    }
+    
 }

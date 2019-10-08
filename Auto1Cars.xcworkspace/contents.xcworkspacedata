@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Auto1Cars/Views/Manufacturers/Manufacturers.storyboard">
-   </FileRef>
-   <FileRef
       location = "group:Auto1Cars.xcodeproj">
    </FileRef>
    <FileRef

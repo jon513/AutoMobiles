@@ -9,18 +9,40 @@
 import UIKit
 
 class ManufacturersViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
         }
     }
-    var viewModel = ManufacturersViewModel(delegate: self as! ManufacturerViewModelProtocol)
+    var viewModel: ManufacturersViewModel!
+    var networkManager = NetworkManager(authenticationParams: AuthenticationBuilder.buildApiKeyParams())
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        viewModel = ManufacturersViewModel(delegate: self)
+        
+        ManufacturerTableViewCell.registerSelf(inTableView: tableView)
+        title = viewModel.title
+        fetchDataFromServer()
+    }
+    
+    func fetchDataFromServer()
+    {
+        guard let nextPage = viewModel.nextPage else { return }
+        networkManager.getManufacturers(forPage: nextPage) { [weak self] (manufacturers, error) in
+            
+            DispatchQueue.main.async {
+                guard error == nil, let newManufacturer = manufacturers else {
+                    let errorAlert = MessageUtility.createASimpleAlert(title: "Error", message: error ?? ManufacturersViewModel.generalErrorMessage)
+                    self?.present(errorAlert, animated: true)
+                    return
+                }
+                self?.viewModel.set(newManufacturer: newManufacturer)
+            }
+        }
     }
 }
 
@@ -36,16 +58,23 @@ extension ManufacturersViewController: UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        fatalError()
+        let manufacturer = viewModel.getManufacturer(at: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ManufacturerTableViewCell.reusableIdentifier, for: indexPath) as? ManufacturerTableViewCell else {
+            fatalError("Can't dequeue ManufacturerTableViewCell")
+        }
+        cell.set(manufacturer: manufacturer)
+        return cell
     }
-    
-    
 }
 
 extension ManufacturersViewController: ManufacturerViewModelProtocol
 {
     func update() {
-        fatalError()
+        tableView.reloadData()
+    }
+    
+    func update(title: String) {
+        self.title = title
     }
     
     func loading() {
