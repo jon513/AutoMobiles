@@ -44,6 +44,16 @@ class ManufacturersViewController: UIViewController {
             }
         }
     }
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if  segue.identifier == SegueIds.fromManufacturersToCars,
+            let carsViewController = segue.destination as? CarsViewController,
+            let indexPath = sender as? IndexPath{
+            carsViewController.viewModel.manufacturers = self.viewModel.getManufacturer(at: indexPath)
+        }
+    }
+
 }
 
 extension ManufacturersViewController: UITableViewDelegate
@@ -54,6 +64,7 @@ extension ManufacturersViewController: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: SegueIds.fromManufacturersToCars, sender: indexPath)
     }
 }
 

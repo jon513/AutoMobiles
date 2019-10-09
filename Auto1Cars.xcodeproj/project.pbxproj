@@ -13,7 +13,6 @@
 		6B9478D7234B785D00AEE50F /* Wkda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478D6234B785D00AEE50F /* Wkda.swift */; };
 		6B9478DE234CAAB400AEE50F /* ManufacturerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478DC234CAAB400AEE50F /* ManufacturerTableViewCell.swift */; };
 		6B9478DF234CAAB400AEE50F /* ManufacturerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9478DD234CAAB400AEE50F /* ManufacturerTableViewCell.xib */; };
-		6B9478E0234CB74800AEE50F /* Manufacturers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B9478DA234CA6AA00AEE50F /* Manufacturers.storyboard */; };
 		6B9478E2234CBE8100AEE50F /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478E1234CBE8100AEE50F /* ApplicationDelegate.swift */; };
 		6BF12614234CC4E200EC9884 /* AppearancesAppDelegateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF12613234CC4E200EC9884 /* AppearancesAppDelegateService.swift */; };
 		6BF12618234CD20000EC9884 /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF12617234CD20000EC9884 /* CarsViewController.swift */; };
@@ -54,6 +53,7 @@
 		A25B510F2349D5BE00B68794 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B510E2349D5BE00B68794 /* Cars.swift */; };
 		A25B5112234BCBD400B68794 /* ManufacturerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B5111234BCBD400B68794 /* ManufacturerViewModel.swift */; };
 		A25B5114234BCC9200B68794 /* ViewModelsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B5113234BCC9200B68794 /* ViewModelsProtocol.swift */; };
+		A2C46E62234D02BE0061F94B /* Manufacturers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C46E61234D02BE0061F94B /* Manufacturers.storyboard */; };
 		BD91352224A9ADFB7EDF4D1C /* Pods_Auto1CarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751C18EE4385C3DA9C8AA3D /* Pods_Auto1CarsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +84,6 @@
 		5B9B2062475EB25C5B378C52 /* Pods-Auto1CarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsUITests.release.xcconfig"; path = "Target Support Files/Pods-Auto1CarsUITests/Pods-Auto1CarsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		6B9478D6234B785D00AEE50F /* Wkda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wkda.swift; sourceTree = "<group>"; };
-		6B9478DA234CA6AA00AEE50F /* Manufacturers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Manufacturers.storyboard; path = /Users/amir.kashani/Desktop/Github/Auto1/Auto1Cars/Views/Manufacturers/Manufacturers.storyboard; sourceTree = "<absolute>"; };
 		6B9478DC234CAAB400AEE50F /* ManufacturerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerTableViewCell.swift; sourceTree = "<group>"; };
 		6B9478DD234CAAB400AEE50F /* ManufacturerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManufacturerTableViewCell.xib; sourceTree = "<group>"; };
 		6B9478E1234CBE8100AEE50F /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +132,7 @@
 		A25B510E2349D5BE00B68794 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		A25B5111234BCBD400B68794 /* ManufacturerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerViewModel.swift; sourceTree = "<group>"; };
 		A25B5113234BCC9200B68794 /* ViewModelsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsProtocol.swift; sourceTree = "<group>"; };
+		A2C46E61234D02BE0061F94B /* Manufacturers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Manufacturers.storyboard; sourceTree = "<group>"; };
 		B33765FB7F1FC8E108DEBADD /* Pods-Auto1Cars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1Cars.release.xcconfig"; path = "Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars.release.xcconfig"; sourceTree = "<group>"; };
 		BB17F2B0440B69FE153DB931 /* Pods-Auto1CarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsTests.release.xcconfig"; path = "Target Support Files/Pods-Auto1CarsTests/Pods-Auto1CarsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -414,9 +414,9 @@
 		A25B5115234BCE3B00B68794 /* Manufacturers */ = {
 			isa = PBXGroup;
 			children = (
-				6B9478DB234CAA8B00AEE50F /* Cells */,
-				6B9478DA234CA6AA00AEE50F /* Manufacturers.storyboard */,
+				A2C46E61234D02BE0061F94B /* Manufacturers.storyboard */,
 				A25B509D2348891D00B68794 /* ManufacturersViewController.swift */,
+				6B9478DB234CAA8B00AEE50F /* Cells */,
 			);
 			path = Manufacturers;
 			sourceTree = "<group>";
@@ -541,8 +541,8 @@
 			files = (
 				6BF1261F234CD35500EC9884 /* CarsTableViewCell.xib in Resources */,
 				A25B50A62348892000B68794 /* LaunchScreen.storyboard in Resources */,
+				A2C46E62234D02BE0061F94B /* Manufacturers.storyboard in Resources */,
 				6BF1261A234CD20B00EC9884 /* Cars.storyboard in Resources */,
-				6B9478E0234CB74800AEE50F /* Manufacturers.storyboard in Resources */,
 				A25B50A32348892000B68794 /* Assets.xcassets in Resources */,
 				6B9478DF234CAAB400AEE50F /* ManufacturerTableViewCell.xib in Resources */,
 				A25B50A12348891D00B68794 /* Main.storyboard in Resources */,

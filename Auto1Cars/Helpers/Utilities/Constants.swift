@@ -11,4 +11,5 @@ import UIKit
 
 struct SegueIds
 {
+    static let fromManufacturersToCars = "fromManufacturersToCars"
 }
