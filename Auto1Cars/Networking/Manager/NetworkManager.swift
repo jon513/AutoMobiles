@@ -37,7 +37,11 @@ struct NetworkManager
     
     func getManufacturers(forPage page: Int, pageSize: Int = 20, completion: @escaping (_ manufacturers: Manufacturers?, _ error: String?)->())
     {
+<<<<<<< HEAD
         Auto1Router.request(.manufacturers(page: page, pageSize: pageSize, authenticationParams: authenticationParams), authenticationParams: authenticationParams)
+=======
+        Auto1Router.request(.manufacturers(page: page, pageSize: 10, authenticationParams: authenticationParams))
+>>>>>>> origin/removed-authentications
         { (data, urlResponse, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
@@ -67,11 +71,15 @@ struct NetworkManager
         }
     }
     
+<<<<<<< HEAD
   
     
     func getCars(forManufacturerId manufacturerId: String, forPage page: Int, pageSize: Int = 20, completion: @escaping (_ manufacturers: Cars?,_ error: String?)->())
+=======
+    func getCars(forManufacturerId manufacturerId: String, forPage page: Int, pageSize: Int = 10, completion: @escaping (_ manufacturers: Cars?,_ error: String?)->())
+>>>>>>> origin/removed-authentications
     {
-        Auto1Router.request(.cars(manufacturerId: manufacturerId, page: page, pageSize: pageSize, authenticationParams: authenticationParams), authenticationParams: authenticationParams)
+        Auto1Router.request(.cars(manufacturerId: manufacturerId, page: page, pageSize: pageSize, authenticationParams: authenticationParams))
         { (data, urlResponse, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)

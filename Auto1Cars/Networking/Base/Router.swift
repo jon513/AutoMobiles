@@ -12,7 +12,7 @@ public typealias NetworkRouterCompletion = (_ data: Data?,_ response: URLRespons
 
 protocol NetworkRouter: class {
     associatedtype EndPoint: EndPointTypeProtocol
-    func request(_ route: EndPoint, authenticationParams: [String:String], completion: @escaping NetworkRouterCompletion)
+    func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion)
     func cancel()
 }
 
@@ -20,11 +20,11 @@ class Router<EndPoint: EndPointTypeProtocol>: NetworkRouter
 {
     private var task: URLSessionTask?
     
-    func request(_ route: EndPoint, authenticationParams: [String:String], completion: @escaping NetworkRouterCompletion)
+    func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion)
     {
         let session = URLSession.shared
         do {
-            let request = try buildRequest(from: route, authenticationParams: authenticationParams)
+            let request = try buildRequest(from: route)
             Logger.log.verbose(request)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 completion(data, response, error)
@@ -41,7 +41,7 @@ class Router<EndPoint: EndPointTypeProtocol>: NetworkRouter
         task?.cancel()
     }
     
-    fileprivate func buildRequest(from route: EndPoint, authenticationParams: [String:String]) throws -> URLRequest
+    fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest
     {
         var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
                                  timeoutInterval: 10.0)
