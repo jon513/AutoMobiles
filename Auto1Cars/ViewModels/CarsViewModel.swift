@@ -16,7 +16,10 @@ class CarsViewModel: NSObject
     var delegate: CarsViewModelProtocol
     var cars: Cars?
     let defaultTitle = "Car"
-    var manufacturer: Wkda
+    var manufacturer: Wkda {
+        didSet {
+        }
+    }
 
     static let generalErrorMessage = "There are some problems please try again later"
     
@@ -28,18 +31,17 @@ class CarsViewModel: NSObject
     
     func set(newCars: Cars)
     {
+        self.delegate.update(title: manufacturer.value ?? defaultTitle)
         guard var currentWkda = cars?.wkda,
         let newWkda = newCars.wkda else {
             cars = newCars
-            self.delegate.update()
+            self.delegate.update()            
             return
         }
-        
         currentWkda.append(contentsOf: newWkda)
         cars = newCars
         cars?.wkda = currentWkda
         self.delegate.update()
-        self.delegate.update(title: manufacturer.value ?? defaultTitle)
         self.delegate.update()
     }
     

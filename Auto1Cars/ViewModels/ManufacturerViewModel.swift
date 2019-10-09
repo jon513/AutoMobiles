@@ -26,6 +26,7 @@ class ManufacturersViewModel: NSObject
     {
         guard var currentWkda = manufacturers?.wkda,
             let newWkda = newManufacturer.wkda else {
+                //Is first time
                 manufacturers = newManufacturer
                 self.delegate.update()
                 self.delegate.update(title: "Manufacturers")

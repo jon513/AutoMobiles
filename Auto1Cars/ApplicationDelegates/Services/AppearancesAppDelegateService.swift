@@ -13,6 +13,7 @@ class AppearancesAppDelegateService: ApplicationService
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool
     {
         UINavigationBar.appearance().backgroundColor = .systemBlue
+        UINavigationBar.appearance().tintColor = .darkText
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.darkText]
         
         return true
