@@ -13,6 +13,9 @@ import XCTest
 class NetworkManagerTests: XCTestCase
 {
     var networkManager: NetworkManager!
+    let pageSize = 20
+    let pageNumber = 0
+    
     override func setUp()
     {
         let authenticationKeys = AuthenticationBuilder.buildApiKeyParams()
@@ -28,11 +31,12 @@ class NetworkManagerTests: XCTestCase
     {
         let getManufactureresExpectation = XCTestExpectation(description: "Wait for GetManufactureres services")
         
-        networkManager.getManufacturers(forPage: 0) { (manufacturers, error) in
+        
+        networkManager.getManufacturers(forPage: 0, pageSize: pageSize) { (manufacturers, error) in
             XCTAssertNil(error, error ?? "")
             XCTAssertNotNil(manufacturers)
             XCTAssertNotNil(manufacturers?.wkda)
-            XCTAssertEqual(manufacturers?.wkda?.count, 10, "number of fetched manufactureres is not 10")
+            XCTAssertEqual(manufacturers?.wkda?.count, pageSize, "number of fetched manufactureres is not 10")
             getManufactureresExpectation.fulfill()
         }
         
@@ -43,7 +47,7 @@ class NetworkManagerTests: XCTestCase
     {
         let getCarsExpectation = XCTestExpectation(description: "Wait for Cars services")
         
-        networkManager.getCars(forManufacturerId: "107", forPage: 0) { (cars, error) in
+        networkManager.getCars(forManufacturerId: "107", forPage: pageNumber, pageSize: pageSize) { (cars, error) in
             XCTAssertNil(error, error ?? "")
             XCTAssertNotNil(cars)
             XCTAssertNotNil(cars?.wkda)
