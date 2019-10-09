@@ -14,6 +14,7 @@ class ManufacturersViewController: UIViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
+            tableView.removeExtraCells()
         }
     }
     var viewModel: ManufacturersViewModel!
@@ -50,7 +51,7 @@ class ManufacturersViewController: UIViewController {
         if  segue.identifier == SegueIds.fromManufacturersToCars,
             let carsViewController = segue.destination as? CarsViewController,
             let indexPath = sender as? IndexPath{
-            carsViewController.viewModel.manufacturers = self.viewModel.getManufacturer(at: indexPath)
+            carsViewController.viewModel?.manufacturer = self.viewModel.getManufacturer(at: indexPath)
         }
     }
 
@@ -71,7 +72,7 @@ extension ManufacturersViewController: UITableViewDelegate
 extension ManufacturersViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows
+        return viewModel?.numberOfRows ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

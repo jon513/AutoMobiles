@@ -14,28 +14,33 @@ class CarsViewController: UIViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
+            tableView.removeExtraCells()
         }
     }
     var viewModel: CarsViewModel!
+    
+    var manufacturer: Wkda? {
+        didSet {
+            guard let newManufacturer = manufacturer else { return }
+            viewModel = CarsViewModel(delegate: self, manufacturer: newManufacturer)
+            fetchDataFromServer()
+        }
+    }
     var networkManager = NetworkManager(authenticationParams: AuthenticationBuilder.buildApiKeyParams())
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        viewModel = CarsViewModel(delegate: self)
-        
         CarsTableViewCell.registerSelf(inTableView: tableView)
-        title = viewModel.title
-        fetchDataFromServer()
     }
     
     func fetchDataFromServer()
     {
         guard let nextPage = viewModel.nextPage ,
-        let manufacturerId = self.viewModel.manufacturer.key
-        else { return }
+            let manufacturerId = manufacturer?.key
+            else { return }
         networkManager.getCars(forManufacturerId: manufacturerId, forPage: nextPage) { [weak self] (cars, error) in
-            
+
             DispatchQueue.main.async {
                 guard error == nil, let newCars = cars else {
                     let errorAlert = MessageUtility.createASimpleAlert(title: "Error", message: error ?? CarsViewModel.generalErrorMessage)
@@ -45,6 +50,15 @@ class CarsViewController: UIViewController {
                 self?.viewModel.set(newCars: newCars)
             }
         }
+    }
+    
+    
+    //MARK: - Methods
+    func showAlert(forRow indexPath:IndexPath)
+    {
+        let message = viewModel.getAlertMessage(forRow: indexPath)
+        let alert = MessageUtility.createASimpleAlert(title: "", message: message)
+        present(alert, animated: true)
     }
 }
 
@@ -56,6 +70,7 @@ extension CarsViewController: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        showAlert(forRow: indexPath)
     }
 }
 
