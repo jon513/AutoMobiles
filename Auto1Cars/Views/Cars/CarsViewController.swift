@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CarsViewController: UIViewController {
-    
+class CarsViewController: UIViewController
+{
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -28,17 +28,22 @@ class CarsViewController: UIViewController {
     }
     var networkManager = NetworkManager(authenticationParams: AuthenticationBuilder.buildApiKeyParams())
     
+    //MARK: - Life cycle
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
         CarsTableViewCell.registerSelf(inTableView: tableView)
     }
     
+    //MARK: - Methods
+        
     func fetchDataFromServer()
     {
         guard let nextPage = viewModel.nextPage ,
             let manufacturerId = manufacturer?.key
             else { return }
+        Logger.log.info("Next page --------> \(nextPage)")
         networkManager.getCars(forManufacturerId: manufacturerId, forPage: nextPage) { [weak self] (cars, error) in
 
             DispatchQueue.main.async {
@@ -52,8 +57,11 @@ class CarsViewController: UIViewController {
         }
     }
     
+    func shouldLoadNextPage(nextIndexPath indexPath: IndexPath) -> Bool
+    {
+        return indexPath.row == viewModel.numberOfRows - 5
+    }
     
-    //MARK: - Methods
     func showAlert(forRow indexPath:IndexPath)
     {
         let message = viewModel.getAlertMessage(forRow: indexPath)
@@ -72,12 +80,18 @@ extension CarsViewController: UITableViewDelegate
         tableView.deselectRow(at: indexPath, animated: true)
         showAlert(forRow: indexPath)
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if shouldLoadNextPage(nextIndexPath: indexPath) {
+            fetchDataFromServer()
+        }
+    }
 }
 
 extension CarsViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows
+        return viewModel?.numberOfRows ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,14 +113,4 @@ extension CarsViewController: CarsViewModelProtocol
     func update(title: String) {
         self.title = title
     }
-    
-    func loading() {
-        fatalError()
-    }
-    
-    func loaded() {
-        fatalError()
-    }
-    
-    
 }

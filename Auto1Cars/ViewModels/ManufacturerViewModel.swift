@@ -40,13 +40,14 @@ class ManufacturersViewModel: NSObject
     var nextPage: Int? {
         guard manufacturers != nil else { return 0 }
         guard let currentPage = manufacturers?.page,
-            let pageSize = manufacturers?.pageSize,
-            currentPage < pageSize else {
+            let totalPageCount = manufacturers?.totalPageCount,
+            currentPage < totalPageCount else {
                 return nil
         }
+        
         return currentPage + 1
     }
-    
+        
     var manufacturers: Manufacturers? {
         didSet {
             self.delegate.update()
@@ -64,9 +65,4 @@ class ManufacturersViewModel: NSObject
     var numberOfRows: Int {
         return manufacturers?.wkda?.count ?? 0
     }
-    
-    var title: String! {
-        return "loading..."
-    }
-    
 }

@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ManufacturersViewController: UIViewController {
-    
+class ManufacturersViewController: UIViewController
+{
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -19,24 +19,28 @@ class ManufacturersViewController: UIViewController {
     }
     var viewModel: ManufacturersViewModel!
     var networkManager = NetworkManager(authenticationParams: AuthenticationBuilder.buildApiKeyParams())
-    
+    //MARK: - Life cycle
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
         viewModel = ManufacturersViewModel(delegate: self)
         
         ManufacturerTableViewCell.registerSelf(inTableView: tableView)
-        title = viewModel.title
         fetchDataFromServer()
     }
     
+    //MARK: - Methods
+        
     func fetchDataFromServer()
     {
         guard let nextPage = viewModel.nextPage else { return }
+        Logger.log.info("Next page --------> \(nextPage)")
         networkManager.getManufacturers(forPage: nextPage) { [weak self] (manufacturers, error) in
             
             DispatchQueue.main.async {
                 guard error == nil, let newManufacturer = manufacturers else {
+                    Logger.log.error(error ?? "")
                     let errorAlert = MessageUtility.createASimpleAlert(title: "Error", message: error ?? ManufacturersViewModel.generalErrorMessage)
                     self?.present(errorAlert, animated: true)
                     return
@@ -45,16 +49,21 @@ class ManufacturersViewController: UIViewController {
             }
         }
     }
+    
+    func shouldLoadNextPage(nextIndexPath indexPath: IndexPath) -> Bool
+    {
+        return indexPath.row == viewModel.numberOfRows - 5
+    }
+
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if  segue.identifier == SegueIds.fromManufacturersToCars,
             let carsViewController = segue.destination as? CarsViewController,
             let indexPath = sender as? IndexPath{
-            carsViewController.viewModel?.manufacturer = self.viewModel.getManufacturer(at: indexPath)
+            carsViewController.manufacturer = self.viewModel.getManufacturer(at: indexPath)
         }
     }
-
 }
 
 extension ManufacturersViewController: UITableViewDelegate
@@ -66,6 +75,12 @@ extension ManufacturersViewController: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: SegueIds.fromManufacturersToCars, sender: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if shouldLoadNextPage(nextIndexPath: indexPath) {
+            fetchDataFromServer()
+        }
     }
 }
 
@@ -94,14 +109,4 @@ extension ManufacturersViewController: ManufacturerViewModelProtocol
     func update(title: String) {
         self.title = title
     }
-    
-    func loading() {
-        fatalError()
-    }
-    
-    func loaded() {
-        fatalError()
-    }
-    
-    
 }

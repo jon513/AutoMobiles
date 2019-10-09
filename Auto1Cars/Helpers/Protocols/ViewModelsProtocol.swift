@@ -11,6 +11,4 @@ import UIKit
 protocol ViewModelsProtocol
 {
     func update()
-    func loading()
-    func loaded()
 }

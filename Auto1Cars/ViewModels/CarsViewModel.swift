@@ -10,10 +10,11 @@ import UIKit
 protocol CarsViewModelProtocol: ViewModelsProtocol {
     func update(title: String)
 }
+
 class CarsViewModel: NSObject
 {
     var delegate: CarsViewModelProtocol
-    var cars: Cars!
+    var cars: Cars?
     let defaultTitle = "Car"
     var manufacturer: Wkda
 
@@ -27,7 +28,17 @@ class CarsViewModel: NSObject
     
     func set(newCars: Cars)
     {
+        guard var currentWkda = cars?.wkda,
+        let newWkda = newCars.wkda else {
+            cars = newCars
+            self.delegate.update()
+            return
+        }
+        
+        currentWkda.append(contentsOf: newWkda)
         cars = newCars
+        cars?.wkda = currentWkda
+        self.delegate.update()
         self.delegate.update(title: manufacturer.value ?? defaultTitle)
         self.delegate.update()
     }
@@ -35,13 +46,12 @@ class CarsViewModel: NSObject
     var nextPage: Int? {
         guard let currentCars = cars else { return 0 }
         guard let currentPage = currentCars.page,
-            let pageSize = currentCars.pageSize,
-            currentPage < pageSize else {
+            let totalPageCount = currentCars.totalPageCount,
+            currentPage < totalPageCount else {
                 return nil
         }
         return currentPage + 1
     }
-    
     
     func getCar(at indexPath: IndexPath) -> Wkda
     {
@@ -54,17 +64,17 @@ class CarsViewModel: NSObject
     var numberOfRows: Int {
         return cars?.wkda?.count ?? 0
     }
-    
+        
     func getAlertMessage(forRow indexPath:IndexPath) -> String
     {
         guard let wkda = cars?.wkda?[indexPath.row] else {
             fatalError("Index out of range exception")
         }
         let message = """
-        Manufacturer Id: \(manufacturer.key ?? "")
-        Manufacturer: \(manufacturer.value ?? "")
-        Car Id: \(wkda.key ?? "")
-        Car: \(wkda.value ?? "")
+Manufacturer Id: \(manufacturer.key ?? "")
+Manufacturer: \(manufacturer.value ?? "")
+Car Id: \(wkda.key ?? "")
+Car: \(wkda.value ?? "")
 """
         return message
     }
