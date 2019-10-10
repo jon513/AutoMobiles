@@ -49,8 +49,7 @@ struct NetworkManager
                     
                 case .success:
                     guard let responseData = data,
-                        let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
-                            as? Dictionary <String, AnyObject>,
+                        let json = self.convertToDictionary(responseData),
                         var manufacturers = Manufacturers(JSON: json),
                         let wkdaJson = json["wkda"] as? Dictionary<String, String>
                         else {
@@ -82,8 +81,7 @@ struct NetworkManager
                     
                 case .success:
                     guard let responseData = data,
-                        let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments)
-                            as? Dictionary <String, AnyObject>,
+                        let json = self.convertToDictionary(responseData),
                         var cars = Cars(JSON: json),
                         let wkdaJson = json["wkda"] as? Dictionary<String, String>
                         else {
@@ -110,6 +108,17 @@ struct NetworkManager
             }
         }
         return wkdas
+    }
+    
+    
+    func convertToDictionary(_ data: Data) -> [String: Any]? {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        
+        return nil
     }
     
     private func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{

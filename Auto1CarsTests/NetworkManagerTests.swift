@@ -31,12 +31,11 @@ class NetworkManagerTests: XCTestCase
     {
         let getManufactureresExpectation = XCTestExpectation(description: "Wait for GetManufactureres services")
         
-        
-        networkManager.getManufacturers(forPage: 0, pageSize: pageSize) { (manufacturers, error) in
+        networkManager.getManufacturers(forPage: 0, pageSize: pageSize) { [weak self] (manufacturers, error) in
             XCTAssertNil(error, error ?? "")
             XCTAssertNotNil(manufacturers)
             XCTAssertNotNil(manufacturers?.wkda)
-            XCTAssertEqual(manufacturers?.wkda?.count, pageSize, "number of fetched manufactureres is not 10")
+            XCTAssertEqual(manufacturers?.wkda?.count, self?.pageSize, "number of fetched manufactureres is not 10")
             getManufactureresExpectation.fulfill()
         }
         

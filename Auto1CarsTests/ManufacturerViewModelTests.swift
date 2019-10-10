@@ -12,29 +12,36 @@ import XCTest
 class ManufacturerViewModelTests: XCTestCase
 {
     var viewModel:ManufacturersViewModel!
+    var manufacturer: Manufacturers!
     
     override func setUp()
     {
         viewModel = ManufacturersViewModel(delegate: self)
+        manufacturer = MockDataForTests.getJsonToManufacturer(jsonName: .Json1)
+        viewModel.manufacturers = manufacturer
     }
     
     override func tearDown()
     {
         viewModel = nil
+        manufacturer = nil
     }
     
-    func testExample()
+    func testThatManufacturerIsLoaded()
     {
+        XCTAssertNotNil(manufacturer)
+        XCTAssertNotNil(manufacturer.wkda)
+    }
+    
+    func testThatCreateCorrectViewModel()
+    {
+        XCTAssertEqual(viewModel.numberOfRows, manufacturer.wkda?.count)
     }
 }
 
 extension ManufacturerViewModelTests: ManufacturerViewModelProtocol
 {
-    func update(title: String)
-    {
-    }
+    func update(title: String) { }
     
-    func update()
-    {
-    }
+    func update() { }
 }

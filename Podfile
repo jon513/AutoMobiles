@@ -6,7 +6,6 @@ target 'Auto1Cars' do
     pod 'SwiftyBeaver', '~> 1.7.1'
     pod 'ObjectMapper', '~> 3.4'
     pod 'PKHUD', '~> 5.0'
-    pod 'Disk'
 
   # Pods for Auto1Cars
 

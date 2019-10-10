@@ -1,5 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Disk/Disk.framework
 ${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
 ${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework

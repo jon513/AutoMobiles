@@ -21,6 +21,9 @@
 		6BF1261E234CD35500EC9884 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1261C234CD35500EC9884 /* CarsTableViewCell.swift */; };
 		6BF1261F234CD35500EC9884 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF1261D234CD35500EC9884 /* CarsTableViewCell.xib */; };
 		6BF12621234CD3CA00EC9884 /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF12620234CD3CA00EC9884 /* CarsViewModel.swift */; };
+		A249B0DA234E595900BB6732 /* Json2.json in Resources */ = {isa = PBXBuildFile; fileRef = A249B0D8234E595900BB6732 /* Json2.json */; };
+		A249B0DB234E595900BB6732 /* Json1.json in Resources */ = {isa = PBXBuildFile; fileRef = A249B0D9234E595900BB6732 /* Json1.json */; };
+		A249B0DD234E59FC00BB6732 /* MockDataForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A249B0DC234E59FC00BB6732 /* MockDataForTests.swift */; };
 		A25B509C2348891D00B68794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509B2348891D00B68794 /* AppDelegate.swift */; };
 		A25B509E2348891D00B68794 /* ManufacturersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509D2348891D00B68794 /* ManufacturersViewController.swift */; };
 		A25B50A12348891D00B68794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B509F2348891D00B68794 /* Main.storyboard */; };
@@ -95,6 +98,9 @@
 		6BF1261C234CD35500EC9884 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
 		6BF1261D234CD35500EC9884 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
 		6BF12620234CD3CA00EC9884 /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
+		A249B0D8234E595900BB6732 /* Json2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Json2.json; sourceTree = "<group>"; };
+		A249B0D9234E595900BB6732 /* Json1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Json1.json; sourceTree = "<group>"; };
+		A249B0DC234E59FC00BB6732 /* MockDataForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataForTests.swift; sourceTree = "<group>"; };
 		A25B50982348891D00B68794 /* Auto1Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auto1Cars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B509B2348891D00B68794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A25B509D2348891D00B68794 /* ManufacturersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +214,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A249B0DE234E5AEE00BB6732 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50B22348892000B68794 /* Info.plist */,
+				A249B0D9234E595900BB6732 /* Json1.json */,
+				A249B0D8234E595900BB6732 /* Json2.json */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		A25B508F2348891D00B68794 = {
 			isa = PBXGroup;
 			children = (
@@ -247,8 +263,9 @@
 		A25B50AF2348892000B68794 /* Auto1CarsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A249B0DE234E5AEE00BB6732 /* SupportingFiles */,
+				A249B0DC234E59FC00BB6732 /* MockDataForTests.swift */,
 				A25B50B02348892000B68794 /* AuthenticationBuilderTests.swift */,
-				A25B50B22348892000B68794 /* Info.plist */,
 				6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */,
 				6B81F11A234E29F400B37286 /* ManufacturerViewModelTests.swift */,
 			);
@@ -556,6 +573,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A249B0DA234E595900BB6732 /* Json2.json in Resources */,
+				A249B0DB234E595900BB6732 /* Json1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +723,7 @@
 				6B81F11B234E29F400B37286 /* ManufacturerViewModelTests.swift in Sources */,
 				6B9478D5234B6C5500AEE50F /* NetworkManagerTests.swift in Sources */,
 				A25B50B12348892000B68794 /* AuthenticationBuilderTests.swift in Sources */,
+				A249B0DD234E59FC00BB6732 /* MockDataForTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,7 +932,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XD3TB93322;
-				INFOPLIST_FILE = Auto1CarsTests/Info.plist;
+				INFOPLIST_FILE = Auto1CarsTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -934,7 +954,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XD3TB93322;
-				INFOPLIST_FILE = Auto1CarsTests/Info.plist;
+				INFOPLIST_FILE = Auto1CarsTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
