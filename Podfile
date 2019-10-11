@@ -5,7 +5,6 @@ target 'Auto1Cars' do
     use_frameworks!
     pod 'SwiftyBeaver', '~> 1.7.1'
     pod 'ObjectMapper', '~> 3.4'
-    pod 'PKHUD', '~> 5.0'
 
   # Pods for Auto1Cars
 

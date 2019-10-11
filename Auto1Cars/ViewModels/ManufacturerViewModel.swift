@@ -15,6 +15,7 @@ protocol ManufacturerViewModelProtocol: ViewModelsProtocol {
 class ManufacturersViewModel: NSObject
 {
     var delegate: ManufacturerViewModelProtocol
+    
     static let generalErrorMessage = "There are some problems please try again later"
     
     init(delegate: ManufacturerViewModelProtocol)
@@ -40,6 +41,11 @@ class ManufacturersViewModel: NSObject
     
     var isListEmpty:Bool {
         return numberOfRows < 1
+    }
+    
+    func resetData()
+    {
+        manufacturers = nil
     }
     
     var nextPage: Int? {

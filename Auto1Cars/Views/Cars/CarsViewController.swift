@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarsViewController: UIViewController
+class CarsViewController: MasterViewController
 {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -34,6 +34,7 @@ class CarsViewController: UIViewController
     {
         super.viewDidLoad()
         CarsTableViewCell.registerSelf(inTableView: tableView)
+        showEmptyState(type: .fetchingData)
     }
     
     //MARK: - Methods
@@ -44,15 +45,17 @@ class CarsViewController: UIViewController
             let manufacturerId = manufacturer?.key
             else { return }
         Logger.log.info("Next page --------> \(nextPage)")
-        networkManager.getCars(forManufacturerId: manufacturerId, forPage: nextPage) { [weak self] (cars, error) in
+        networkManager.getCars(forManufacturerId: manufacturerId, forPage: nextPage) { [unowned self] (cars, error) in
 
             DispatchQueue.main.async {
+                self.hideEmpyState()
                 guard error == nil, let newCars = cars else {
                     let errorAlert = MessageUtility.createASimpleAlert(title: "Error", message: error ?? CarsViewModel.generalErrorMessage)
-                    self?.present(errorAlert, animated: true)
+                    self.present(errorAlert, animated: true)
+                    self.showEmptyState(type: .cars)
                     return
                 }
-                self?.viewModel.set(newCars: newCars)
+                self.viewModel.set(newCars: newCars)
             }
         }
     }

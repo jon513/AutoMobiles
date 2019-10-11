@@ -17,10 +17,11 @@ class ManufacturersViewController: MasterViewController
             tableView.removeExtraCells()
         }
     }
+    private let refreshControl = UIRefreshControl()
     var viewModel: ManufacturersViewModel!
     var networkManager = NetworkManager(authenticationParams: AuthenticationBuilder.buildApiKeyParams())
     //MARK: - Life cycle
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -29,10 +30,26 @@ class ManufacturersViewController: MasterViewController
         ManufacturerTableViewCell.registerSelf(inTableView: tableView)
         showEmptyState(type: .fetchingData)
         fetchDataFromServer()
+        addRefreshController()
     }
     
     //MARK: - Methods
-        
+    func addRefreshController()
+    {
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    @objc func refreshData ()
+    {
+        viewModel.resetData()
+        fetchDataFromServer()
+    }
+    
     
     func fetchDataFromServer()
     {
@@ -60,7 +77,7 @@ class ManufacturersViewController: MasterViewController
     {
         return indexPath.row == viewModel.numberOfRows - 5
     }
-
+    
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
