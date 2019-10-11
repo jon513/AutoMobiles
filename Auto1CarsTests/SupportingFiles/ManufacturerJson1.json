@@ -1,0 +1,27 @@
+{
+    "page": 0,
+    "pageSize": 20,
+    "totalPageCount": 2,
+    "wkda": {
+        "210": "Daihatsu",
+        "230": "Dodge",
+        "235": "DS Automobiles",
+        "250": "e.GO",
+        "277": "Ferrari",
+        "280": "Fiat",
+        "285": "Ford",
+        "340": "Honda",
+        "345": "Hyundai",
+        "357": "Infiniti",
+        "362": "Isuzu",
+        "365": "Iveco",
+        "380": "Jaguar",
+        "390": "Jeep",
+        "425": "Kia",
+        "460": "Lada",
+        "465": "Lamborghini",
+        "470": "Lancia",
+        "487": "Lexus",
+        "730": "Land Rover"
+    }
+}

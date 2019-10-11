@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Manufacturers View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ManufacturersViewController" customModule="Auto1Cars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V1y-xg-CYU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V1y-xg-CYU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8OS-9x-bwo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V1y-xg-CYU" secondAttribute="trailing" id="9Ac-5K-UTw"/>
+                            <constraint firstItem="V1y-xg-CYU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mF4-Oj-CeF"/>
+                            <constraint firstAttribute="bottom" secondItem="V1y-xg-CYU" secondAttribute="bottom" id="nQh-34-3Jr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ryf-fz-2Lq"/>
+                    <connections>
+                        <outlet property="tableView" destination="V1y-xg-CYU" id="FOS-Qz-tsG"/>
+                        <segue destination="BAO-ar-WcU" kind="show" identifier="fromManufacturersToCars" id="Xmx-0S-VLW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="652"/>
+        </scene>
+        <!--Cars-->
+        <scene sceneID="57K-p5-ISU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cars" id="BAO-ar-WcU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O69-6l-CUV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LwR-Kh-MT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2243" y="654"/>
+        </scene>
+    </scenes>
+</document>

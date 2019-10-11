@@ -3,17 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BF5662CAEA91CFE7B5EC745 /* Pods_Auto1CarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533B1A62617C45CA70E1ABFF /* Pods_Auto1CarsTests.framework */; };
+		60069E04EE41668DF6EBF38B /* Pods_Auto1Cars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A97D4B722EF7D4D2A8D2158 /* Pods_Auto1Cars.framework */; };
+		6B81F11B234E29F400B37286 /* ManufacturerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B81F11A234E29F400B37286 /* ManufacturerViewModelTests.swift */; };
+		6B9478D5234B6C5500AEE50F /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */; };
+		6B9478D7234B785D00AEE50F /* Wkda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478D6234B785D00AEE50F /* Wkda.swift */; };
+		6B9478DE234CAAB400AEE50F /* ManufacturerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478DC234CAAB400AEE50F /* ManufacturerTableViewCell.swift */; };
+		6B9478DF234CAAB400AEE50F /* ManufacturerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B9478DD234CAAB400AEE50F /* ManufacturerTableViewCell.xib */; };
+		6B9478E2234CBE8100AEE50F /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9478E1234CBE8100AEE50F /* ApplicationDelegate.swift */; };
+		6BF12614234CC4E200EC9884 /* AppearancesAppDelegateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF12613234CC4E200EC9884 /* AppearancesAppDelegateService.swift */; };
+		6BF12618234CD20000EC9884 /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF12617234CD20000EC9884 /* CarsViewController.swift */; };
+		6BF1261A234CD20B00EC9884 /* Cars.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BF12619234CD20B00EC9884 /* Cars.storyboard */; };
+		6BF1261E234CD35500EC9884 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1261C234CD35500EC9884 /* CarsTableViewCell.swift */; };
+		6BF1261F234CD35500EC9884 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF1261D234CD35500EC9884 /* CarsTableViewCell.xib */; };
+		6BF12621234CD3CA00EC9884 /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF12620234CD3CA00EC9884 /* CarsViewModel.swift */; };
+		A249B0DA234E595900BB6732 /* ManufacturerJson2.json in Resources */ = {isa = PBXBuildFile; fileRef = A249B0D8234E595900BB6732 /* ManufacturerJson2.json */; };
+		A249B0DB234E595900BB6732 /* ManufacturerJson1.json in Resources */ = {isa = PBXBuildFile; fileRef = A249B0D9234E595900BB6732 /* ManufacturerJson1.json */; };
+		A249B0DD234E59FC00BB6732 /* MockDataForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A249B0DC234E59FC00BB6732 /* MockDataForTests.swift */; };
 		A25B509C2348891D00B68794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509B2348891D00B68794 /* AppDelegate.swift */; };
-		A25B509E2348891D00B68794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509D2348891D00B68794 /* ViewController.swift */; };
+		A25B509E2348891D00B68794 /* ManufacturersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509D2348891D00B68794 /* ManufacturersViewController.swift */; };
 		A25B50A12348891D00B68794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B509F2348891D00B68794 /* Main.storyboard */; };
 		A25B50A32348892000B68794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25B50A22348892000B68794 /* Assets.xcassets */; };
 		A25B50A62348892000B68794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25B50A42348892000B68794 /* LaunchScreen.storyboard */; };
-		A25B50B12348892000B68794 /* Auto1CarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50B02348892000B68794 /* Auto1CarsTests.swift */; };
+		A25B50B12348892000B68794 /* AuthenticationBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50B02348892000B68794 /* AuthenticationBuilderTests.swift */; };
 		A25B50BC2348892000B68794 /* Auto1CarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50BB2348892000B68794 /* Auto1CarsUITests.swift */; };
+		A25B50CD23488D5300B68794 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50CC23488D5300B68794 /* ApplicationService.swift */; };
+		A25B50D023488D7600B68794 /* LoggerAppDelegateServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50CF23488D7600B68794 /* LoggerAppDelegateServices.swift */; };
+		A25B50E223488DA800B68794 /* TableViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D323488DA800B68794 /* TableViewUtility.swift */; };
+		A25B50E323488DA800B68794 /* StringUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D423488DA800B68794 /* StringUtility.swift */; };
+		A25B50E423488DA800B68794 /* ViewControlleUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D523488DA800B68794 /* ViewControlleUtility.swift */; };
+		A25B50E523488DA800B68794 /* DataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D623488DA800B68794 /* DataUtility.swift */; };
+		A25B50E623488DA800B68794 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D823488DA800B68794 /* Constants.swift */; };
+		A25B50E723488DA800B68794 /* AuthenticationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50D923488DA800B68794 /* AuthenticationBuilder.swift */; };
+		A25B50E823488DA800B68794 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DA23488DA800B68794 /* Logger.swift */; };
+		A25B50E923488DA800B68794 /* MessageUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DB23488DA800B68794 /* MessageUtility.swift */; };
+		A25B50EA23488DA800B68794 /* NotificationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DC23488DA800B68794 /* NotificationUtility.swift */; };
+		A25B50EB23488DA800B68794 /* LoadingUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50DD23488DA800B68794 /* LoadingUtility.swift */; };
+		A25B50ED23488DA800B68794 /* NibLoadableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */; };
+		A25B50FF23488FE900B68794 /* Auto1EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F123488FE900B68794 /* Auto1EndPoints.swift */; };
+		A25B510023488FE900B68794 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F323488FE900B68794 /* ParameterEncoding.swift */; };
+		A25B510123488FE900B68794 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F423488FE900B68794 /* URLParameterEncoding.swift */; };
+		A25B510223488FE900B68794 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F523488FE900B68794 /* JSONParameterEncoder.swift */; };
+		A25B510423488FE900B68794 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50F923488FE900B68794 /* NetworkManager.swift */; };
+		A25B510523488FE900B68794 /* EndPointTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50FB23488FE900B68794 /* EndPointTypeProtocol.swift */; };
+		A25B510623488FE900B68794 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50FC23488FE900B68794 /* HTTPMethod.swift */; };
+		A25B510723488FE900B68794 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50FD23488FE900B68794 /* Router.swift */; };
+		A25B510823488FE900B68794 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B50FE23488FE900B68794 /* HTTPHeaders.swift */; };
+		A25B510C2348B7C600B68794 /* Manufacturers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B510A2348B7C600B68794 /* Manufacturers.swift */; };
+		A25B510F2349D5BE00B68794 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B510E2349D5BE00B68794 /* Cars.swift */; };
+		A25B5112234BCBD400B68794 /* ManufacturerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B5111234BCBD400B68794 /* ManufacturerViewModel.swift */; };
+		A25B5114234BCC9200B68794 /* ViewModelsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B5113234BCC9200B68794 /* ViewModelsProtocol.swift */; };
+		A2AD256923505AA1002282DF /* CarsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD256823505AA1002282DF /* CarsViewModelTests.swift */; };
+		A2AD256B23505BD5002282DF /* CarsJson1.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AD256A23505BD5002282DF /* CarsJson1.json */; };
+		A2AD256D23505BDE002282DF /* CarsJson2.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AD256C23505BDE002282DF /* CarsJson2.json */; };
+		A2C46E62234D02BE0061F94B /* Manufacturers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C46E61234D02BE0061F94B /* Manufacturers.storyboard */; };
+		BD91352224A9ADFB7EDF4D1C /* Pods_Auto1CarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751C18EE4385C3DA9C8AA3D /* Pods_Auto1CarsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +82,73 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A97D4B722EF7D4D2A8D2158 /* Pods_Auto1Cars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auto1Cars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2751C18EE4385C3DA9C8AA3D /* Pods_Auto1CarsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auto1CarsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34EBAE4C968B267D43EAB1B2 /* Pods-Auto1CarsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Auto1CarsUITests/Pods-Auto1CarsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		36D5576F1FD39AE8BCB7B5B1 /* Pods-Auto1CarsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsTests.debug.xcconfig"; path = "Target Support Files/Pods-Auto1CarsTests/Pods-Auto1CarsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52CBDD20EC99C52E70A62288 /* Pods-Auto1Cars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1Cars.debug.xcconfig"; path = "Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars.debug.xcconfig"; sourceTree = "<group>"; };
+		533B1A62617C45CA70E1ABFF /* Pods_Auto1CarsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Auto1CarsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9B2062475EB25C5B378C52 /* Pods-Auto1CarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsUITests.release.xcconfig"; path = "Target Support Files/Pods-Auto1CarsUITests/Pods-Auto1CarsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B81F11A234E29F400B37286 /* ManufacturerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerViewModelTests.swift; sourceTree = "<group>"; };
+		6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		6B9478D6234B785D00AEE50F /* Wkda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wkda.swift; sourceTree = "<group>"; };
+		6B9478DC234CAAB400AEE50F /* ManufacturerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerTableViewCell.swift; sourceTree = "<group>"; };
+		6B9478DD234CAAB400AEE50F /* ManufacturerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManufacturerTableViewCell.xib; sourceTree = "<group>"; };
+		6B9478E1234CBE8100AEE50F /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
+		6BF12613234CC4E200EC9884 /* AppearancesAppDelegateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearancesAppDelegateService.swift; sourceTree = "<group>"; };
+		6BF12617234CD20000EC9884 /* CarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewController.swift; sourceTree = "<group>"; };
+		6BF12619234CD20B00EC9884 /* Cars.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cars.storyboard; sourceTree = "<group>"; };
+		6BF1261C234CD35500EC9884 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
+		6BF1261D234CD35500EC9884 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
+		6BF12620234CD3CA00EC9884 /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
+		A249B0D8234E595900BB6732 /* ManufacturerJson2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ManufacturerJson2.json; sourceTree = "<group>"; };
+		A249B0D9234E595900BB6732 /* ManufacturerJson1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ManufacturerJson1.json; sourceTree = "<group>"; };
+		A249B0DC234E59FC00BB6732 /* MockDataForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataForTests.swift; sourceTree = "<group>"; };
 		A25B50982348891D00B68794 /* Auto1Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auto1Cars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B509B2348891D00B68794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A25B509D2348891D00B68794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A25B509D2348891D00B68794 /* ManufacturersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturersViewController.swift; sourceTree = "<group>"; };
 		A25B50A02348891D00B68794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A25B50A22348892000B68794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A25B50A52348892000B68794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A25B50A72348892000B68794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25B50AC2348892000B68794 /* Auto1CarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Auto1CarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A25B50B02348892000B68794 /* Auto1CarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auto1CarsTests.swift; sourceTree = "<group>"; };
+		A25B50B02348892000B68794 /* AuthenticationBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationBuilderTests.swift; sourceTree = "<group>"; };
 		A25B50B22348892000B68794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A25B50B72348892000B68794 /* Auto1CarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Auto1CarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B50BB2348892000B68794 /* Auto1CarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auto1CarsUITests.swift; sourceTree = "<group>"; };
 		A25B50BD2348892000B68794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A25B50CC23488D5300B68794 /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
+		A25B50CF23488D7600B68794 /* LoggerAppDelegateServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerAppDelegateServices.swift; sourceTree = "<group>"; };
+		A25B50D323488DA800B68794 /* TableViewUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewUtility.swift; sourceTree = "<group>"; };
+		A25B50D423488DA800B68794 /* StringUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtility.swift; sourceTree = "<group>"; };
+		A25B50D523488DA800B68794 /* ViewControlleUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControlleUtility.swift; sourceTree = "<group>"; };
+		A25B50D623488DA800B68794 /* DataUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtility.swift; sourceTree = "<group>"; };
+		A25B50D823488DA800B68794 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A25B50D923488DA800B68794 /* AuthenticationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationBuilder.swift; sourceTree = "<group>"; };
+		A25B50DA23488DA800B68794 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		A25B50DB23488DA800B68794 /* MessageUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageUtility.swift; sourceTree = "<group>"; };
+		A25B50DC23488DA800B68794 /* NotificationUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUtility.swift; sourceTree = "<group>"; };
+		A25B50DD23488DA800B68794 /* LoadingUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingUtility.swift; sourceTree = "<group>"; };
+		A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableProtocol.swift; sourceTree = "<group>"; };
+		A25B50F123488FE900B68794 /* Auto1EndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auto1EndPoints.swift; sourceTree = "<group>"; };
+		A25B50F323488FE900B68794 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		A25B50F423488FE900B68794 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		A25B50F523488FE900B68794 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		A25B50F923488FE900B68794 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A25B50FB23488FE900B68794 /* EndPointTypeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointTypeProtocol.swift; sourceTree = "<group>"; };
+		A25B50FC23488FE900B68794 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A25B50FD23488FE900B68794 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A25B50FE23488FE900B68794 /* HTTPHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		A25B510A2348B7C600B68794 /* Manufacturers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manufacturers.swift; sourceTree = "<group>"; };
+		A25B510E2349D5BE00B68794 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
+		A25B5111234BCBD400B68794 /* ManufacturerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerViewModel.swift; sourceTree = "<group>"; };
+		A25B5113234BCC9200B68794 /* ViewModelsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsProtocol.swift; sourceTree = "<group>"; };
+		A2AD256823505AA1002282DF /* CarsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModelTests.swift; sourceTree = "<group>"; };
+		A2AD256A23505BD5002282DF /* CarsJson1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CarsJson1.json; sourceTree = "<group>"; };
+		A2AD256C23505BDE002282DF /* CarsJson2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CarsJson2.json; sourceTree = "<group>"; };
+		A2C46E61234D02BE0061F94B /* Manufacturers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Manufacturers.storyboard; sourceTree = "<group>"; };
+		B33765FB7F1FC8E108DEBADD /* Pods-Auto1Cars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1Cars.release.xcconfig"; path = "Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars.release.xcconfig"; sourceTree = "<group>"; };
+		BB17F2B0440B69FE153DB931 /* Pods-Auto1CarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsTests.release.xcconfig"; path = "Target Support Files/Pods-Auto1CarsTests/Pods-Auto1CarsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60069E04EE41668DF6EBF38B /* Pods_Auto1Cars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF5662CAEA91CFE7B5EC745 /* Pods_Auto1CarsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +172,66 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD91352224A9ADFB7EDF4D1C /* Pods_Auto1CarsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0553DC36D7FE26E1C53DF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52CBDD20EC99C52E70A62288 /* Pods-Auto1Cars.debug.xcconfig */,
+				B33765FB7F1FC8E108DEBADD /* Pods-Auto1Cars.release.xcconfig */,
+				36D5576F1FD39AE8BCB7B5B1 /* Pods-Auto1CarsTests.debug.xcconfig */,
+				BB17F2B0440B69FE153DB931 /* Pods-Auto1CarsTests.release.xcconfig */,
+				34EBAE4C968B267D43EAB1B2 /* Pods-Auto1CarsUITests.debug.xcconfig */,
+				5B9B2062475EB25C5B378C52 /* Pods-Auto1CarsUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B9478DB234CAA8B00AEE50F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B9478DC234CAAB400AEE50F /* ManufacturerTableViewCell.swift */,
+				6B9478DD234CAAB400AEE50F /* ManufacturerTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6BF12616234CCD8A00EC9884 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1261B234CD21200EC9884 /* Cells */,
+				6BF12617234CD20000EC9884 /* CarsViewController.swift */,
+				6BF12619234CD20B00EC9884 /* Cars.storyboard */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		6BF1261B234CD21200EC9884 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6BF1261C234CD35500EC9884 /* CarsTableViewCell.swift */,
+				6BF1261D234CD35500EC9884 /* CarsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A249B0DE234E5AEE00BB6732 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50B22348892000B68794 /* Info.plist */,
+				A249B0D9234E595900BB6732 /* ManufacturerJson1.json */,
+				A249B0D8234E595900BB6732 /* ManufacturerJson2.json */,
+				A2AD256A23505BD5002282DF /* CarsJson1.json */,
+				A2AD256C23505BDE002282DF /* CarsJson2.json */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		A25B508F2348891D00B68794 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +239,8 @@
 				A25B50AF2348892000B68794 /* Auto1CarsTests */,
 				A25B50BA2348892000B68794 /* Auto1CarsUITests */,
 				A25B50992348891D00B68794 /* Products */,
+				4C0553DC36D7FE26E1C53DF4 /* Pods */,
+				DA7E5998B722098152DD0548 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,7 +257,12 @@
 		A25B509A2348891D00B68794 /* Auto1Cars */ = {
 			isa = PBXGroup;
 			children = (
-				A25B509D2348891D00B68794 /* ViewController.swift */,
+				A25B5110234BCBC000B68794 /* ViewModels */,
+				A25B51092348B7B400B68794 /* Models */,
+				A25B50EF23488FE900B68794 /* Networking */,
+				A25B50D123488DA800B68794 /* Helpers */,
+				A25B50CB23488D2F00B68794 /* ApplicationDelegates */,
+				A25B50CA23488D1F00B68794 /* Views */,
 				A25B50C92348892D00B68794 /* SupportingFiles */,
 			);
 			path = Auto1Cars;
@@ -106,8 +271,12 @@
 		A25B50AF2348892000B68794 /* Auto1CarsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A25B50B02348892000B68794 /* Auto1CarsTests.swift */,
-				A25B50B22348892000B68794 /* Info.plist */,
+				A249B0DE234E5AEE00BB6732 /* SupportingFiles */,
+				A249B0DC234E59FC00BB6732 /* MockDataForTests.swift */,
+				A25B50B02348892000B68794 /* AuthenticationBuilderTests.swift */,
+				6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */,
+				6B81F11A234E29F400B37286 /* ManufacturerViewModelTests.swift */,
+				A2AD256823505AA1002282DF /* CarsViewModelTests.swift */,
 			);
 			path = Auto1CarsTests;
 			sourceTree = "<group>";
@@ -124,13 +293,171 @@
 		A25B50C92348892D00B68794 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				A25B509B2348891D00B68794 /* AppDelegate.swift */,
 				A25B509F2348891D00B68794 /* Main.storyboard */,
 				A25B50A22348892000B68794 /* Assets.xcassets */,
 				A25B50A42348892000B68794 /* LaunchScreen.storyboard */,
 				A25B50A72348892000B68794 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A25B50CA23488D1F00B68794 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6BF12616234CCD8A00EC9884 /* Cars */,
+				A25B5115234BCE3B00B68794 /* Manufacturers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A25B50CB23488D2F00B68794 /* ApplicationDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				A25B509B2348891D00B68794 /* AppDelegate.swift */,
+				A25B50CE23488D6D00B68794 /* Services */,
+			);
+			path = ApplicationDelegates;
+			sourceTree = "<group>";
+		};
+		A25B50CE23488D6D00B68794 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6B9478E1234CBE8100AEE50F /* ApplicationDelegate.swift */,
+				A25B50CC23488D5300B68794 /* ApplicationService.swift */,
+				A25B50CF23488D7600B68794 /* LoggerAppDelegateServices.swift */,
+				6BF12613234CC4E200EC9884 /* AppearancesAppDelegateService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A25B50D123488DA800B68794 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50D223488DA800B68794 /* Extensions */,
+				A25B50D723488DA800B68794 /* Utilities */,
+				A25B50E023488DA800B68794 /* Protocols */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A25B50D223488DA800B68794 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50D323488DA800B68794 /* TableViewUtility.swift */,
+				A25B50D423488DA800B68794 /* StringUtility.swift */,
+				A25B50D523488DA800B68794 /* ViewControlleUtility.swift */,
+				A25B50D623488DA800B68794 /* DataUtility.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A25B50D723488DA800B68794 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50D823488DA800B68794 /* Constants.swift */,
+				A25B50D923488DA800B68794 /* AuthenticationBuilder.swift */,
+				A25B50DA23488DA800B68794 /* Logger.swift */,
+				A25B50DB23488DA800B68794 /* MessageUtility.swift */,
+				A25B50DC23488DA800B68794 /* NotificationUtility.swift */,
+				A25B50DD23488DA800B68794 /* LoadingUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A25B50E023488DA800B68794 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50E123488DA800B68794 /* NibLoadableProtocol.swift */,
+				A25B5113234BCC9200B68794 /* ViewModelsProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A25B50EF23488FE900B68794 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50F023488FE900B68794 /* EndPoints */,
+				A25B50F223488FE900B68794 /* Encoding */,
+				A25B50F823488FE900B68794 /* Manager */,
+				A25B50FA23488FE900B68794 /* Base */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A25B50F023488FE900B68794 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50F123488FE900B68794 /* Auto1EndPoints.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		A25B50F223488FE900B68794 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50F323488FE900B68794 /* ParameterEncoding.swift */,
+				A25B50F423488FE900B68794 /* URLParameterEncoding.swift */,
+				A25B50F523488FE900B68794 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		A25B50F823488FE900B68794 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50F923488FE900B68794 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A25B50FA23488FE900B68794 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A25B50FB23488FE900B68794 /* EndPointTypeProtocol.swift */,
+				A25B50FC23488FE900B68794 /* HTTPMethod.swift */,
+				A25B50FD23488FE900B68794 /* Router.swift */,
+				A25B50FE23488FE900B68794 /* HTTPHeaders.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A25B51092348B7B400B68794 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A25B510A2348B7C600B68794 /* Manufacturers.swift */,
+				A25B510E2349D5BE00B68794 /* Cars.swift */,
+				6B9478D6234B785D00AEE50F /* Wkda.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A25B5110234BCBC000B68794 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A25B5111234BCBD400B68794 /* ManufacturerViewModel.swift */,
+				6BF12620234CD3CA00EC9884 /* CarsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A25B5115234BCE3B00B68794 /* Manufacturers */ = {
+			isa = PBXGroup;
+			children = (
+				A2C46E61234D02BE0061F94B /* Manufacturers.storyboard */,
+				A25B509D2348891D00B68794 /* ManufacturersViewController.swift */,
+				6B9478DB234CAA8B00AEE50F /* Cells */,
+			);
+			path = Manufacturers;
+			sourceTree = "<group>";
+		};
+		DA7E5998B722098152DD0548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A97D4B722EF7D4D2A8D2158 /* Pods_Auto1Cars.framework */,
+				533B1A62617C45CA70E1ABFF /* Pods_Auto1CarsTests.framework */,
+				2751C18EE4385C3DA9C8AA3D /* Pods_Auto1CarsUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +467,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25B50C02348892000B68794 /* Build configuration list for PBXNativeTarget "Auto1Cars" */;
 			buildPhases = (
+				1B81CDE53EDD0307EFE56B01 /* [CP] Check Pods Manifest.lock */,
 				A25B50942348891D00B68794 /* Sources */,
 				A25B50952348891D00B68794 /* Frameworks */,
 				A25B50962348891D00B68794 /* Resources */,
+				33B9DAA180BC5BDF9491E739 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +486,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25B50C32348892000B68794 /* Build configuration list for PBXNativeTarget "Auto1CarsTests" */;
 			buildPhases = (
+				CF55BBF1A262E87285570BFF /* [CP] Check Pods Manifest.lock */,
 				A25B50A82348892000B68794 /* Sources */,
 				A25B50A92348892000B68794 /* Frameworks */,
 				A25B50AA2348892000B68794 /* Resources */,
@@ -175,6 +505,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A25B50C62348892000B68794 /* Build configuration list for PBXNativeTarget "Auto1CarsUITests" */;
 			buildPhases = (
+				9992AA0ECB4E77D26AA96CF4 /* [CP] Check Pods Manifest.lock */,
 				A25B50B32348892000B68794 /* Sources */,
 				A25B50B42348892000B68794 /* Frameworks */,
 				A25B50B52348892000B68794 /* Resources */,
@@ -237,8 +568,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BF1261F234CD35500EC9884 /* CarsTableViewCell.xib in Resources */,
 				A25B50A62348892000B68794 /* LaunchScreen.storyboard in Resources */,
+				A2C46E62234D02BE0061F94B /* Manufacturers.storyboard in Resources */,
+				6BF1261A234CD20B00EC9884 /* Cars.storyboard in Resources */,
 				A25B50A32348892000B68794 /* Assets.xcassets in Resources */,
+				6B9478DF234CAAB400AEE50F /* ManufacturerTableViewCell.xib in Resources */,
 				A25B50A12348891D00B68794 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +582,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A249B0DA234E595900BB6732 /* ManufacturerJson2.json in Resources */,
+				A2AD256B23505BD5002282DF /* CarsJson1.json in Resources */,
+				A249B0DB234E595900BB6732 /* ManufacturerJson1.json in Resources */,
+				A2AD256D23505BDE002282DF /* CarsJson2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,13 +598,132 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B81CDE53EDD0307EFE56B01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Auto1Cars-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33B9DAA180BC5BDF9491E739 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9992AA0ECB4E77D26AA96CF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Auto1CarsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF55BBF1A262E87285570BFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Auto1CarsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A25B50942348891D00B68794 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25B509E2348891D00B68794 /* ViewController.swift in Sources */,
+				6BF12621234CD3CA00EC9884 /* CarsViewModel.swift in Sources */,
+				A25B50E923488DA800B68794 /* MessageUtility.swift in Sources */,
+				A25B509E2348891D00B68794 /* ManufacturersViewController.swift in Sources */,
+				A25B50FF23488FE900B68794 /* Auto1EndPoints.swift in Sources */,
+				A25B510423488FE900B68794 /* NetworkManager.swift in Sources */,
+				A25B50E823488DA800B68794 /* Logger.swift in Sources */,
+				A25B50ED23488DA800B68794 /* NibLoadableProtocol.swift in Sources */,
+				A25B50CD23488D5300B68794 /* ApplicationService.swift in Sources */,
+				A25B510523488FE900B68794 /* EndPointTypeProtocol.swift in Sources */,
+				A25B510C2348B7C600B68794 /* Manufacturers.swift in Sources */,
+				A25B50EA23488DA800B68794 /* NotificationUtility.swift in Sources */,
+				A25B510023488FE900B68794 /* ParameterEncoding.swift in Sources */,
+				A25B50EB23488DA800B68794 /* LoadingUtility.swift in Sources */,
+				6B9478D7234B785D00AEE50F /* Wkda.swift in Sources */,
+				6B9478E2234CBE8100AEE50F /* ApplicationDelegate.swift in Sources */,
+				A25B5114234BCC9200B68794 /* ViewModelsProtocol.swift in Sources */,
+				A25B510F2349D5BE00B68794 /* Cars.swift in Sources */,
+				A25B50E523488DA800B68794 /* DataUtility.swift in Sources */,
+				A25B50E223488DA800B68794 /* TableViewUtility.swift in Sources */,
+				A25B50D023488D7600B68794 /* LoggerAppDelegateServices.swift in Sources */,
+				A25B50E423488DA800B68794 /* ViewControlleUtility.swift in Sources */,
+				A25B510723488FE900B68794 /* Router.swift in Sources */,
+				A25B5112234BCBD400B68794 /* ManufacturerViewModel.swift in Sources */,
 				A25B509C2348891D00B68794 /* AppDelegate.swift in Sources */,
+				A25B50E323488DA800B68794 /* StringUtility.swift in Sources */,
+				6BF1261E234CD35500EC9884 /* CarsTableViewCell.swift in Sources */,
+				A25B50E623488DA800B68794 /* Constants.swift in Sources */,
+				A25B510123488FE900B68794 /* URLParameterEncoding.swift in Sources */,
+				A25B510623488FE900B68794 /* HTTPMethod.swift in Sources */,
+				6B9478DE234CAAB400AEE50F /* ManufacturerTableViewCell.swift in Sources */,
+				A25B510823488FE900B68794 /* HTTPHeaders.swift in Sources */,
+				A25B50E723488DA800B68794 /* AuthenticationBuilder.swift in Sources */,
+				6BF12614234CC4E200EC9884 /* AppearancesAppDelegateService.swift in Sources */,
+				A25B510223488FE900B68794 /* JSONParameterEncoder.swift in Sources */,
+				6BF12618234CD20000EC9884 /* CarsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +731,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25B50B12348892000B68794 /* Auto1CarsTests.swift in Sources */,
+				6B81F11B234E29F400B37286 /* ManufacturerViewModelTests.swift in Sources */,
+				6B9478D5234B6C5500AEE50F /* NetworkManagerTests.swift in Sources */,
+				A2AD256923505AA1002282DF /* CarsViewModelTests.swift in Sources */,
+				A25B50B12348892000B68794 /* AuthenticationBuilderTests.swift in Sources */,
+				A249B0DD234E59FC00BB6732 /* MockDataForTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,45 +900,51 @@
 		};
 		A25B50C12348892000B68794 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52CBDD20EC99C52E70A62288 /* Pods-Auto1Cars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Auto1Cars/Info.plist;
+				DEVELOPMENT_TEAM = XD3TB93322;
+				INFOPLIST_FILE = Auto1Cars/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Auto1.Auto1Cars;
+				PRODUCT_BUNDLE_IDENTIFIER = aakpro.Auto1.Auto1Cars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A25B50C22348892000B68794 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B33765FB7F1FC8E108DEBADD /* Pods-Auto1Cars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Auto1Cars/Info.plist;
+				DEVELOPMENT_TEAM = XD3TB93322;
+				INFOPLIST_FILE = Auto1Cars/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Auto1.Auto1Cars;
+				PRODUCT_BUNDLE_IDENTIFIER = aakpro.Auto1.Auto1Cars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		A25B50C42348892000B68794 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36D5576F1FD39AE8BCB7B5B1 /* Pods-Auto1CarsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Auto1CarsTests/Info.plist;
+				DEVELOPMENT_TEAM = XD3TB93322;
+				INFOPLIST_FILE = Auto1CarsTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,11 +960,13 @@
 		};
 		A25B50C52348892000B68794 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB17F2B0440B69FE153DB931 /* Pods-Auto1CarsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Auto1CarsTests/Info.plist;
+				DEVELOPMENT_TEAM = XD3TB93322;
+				INFOPLIST_FILE = Auto1CarsTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,9 +982,11 @@
 		};
 		A25B50C72348892000B68794 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34EBAE4C968B267D43EAB1B2 /* Pods-Auto1CarsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XD3TB93322;
 				INFOPLIST_FILE = Auto1CarsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,9 +1003,11 @@
 		};
 		A25B50C82348892000B68794 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B9B2062475EB25C5B378C52 /* Pods-Auto1CarsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XD3TB93322;
 				INFOPLIST_FILE = Auto1CarsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
