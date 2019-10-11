@@ -21,8 +21,8 @@
 		6BF1261E234CD35500EC9884 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF1261C234CD35500EC9884 /* CarsTableViewCell.swift */; };
 		6BF1261F234CD35500EC9884 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF1261D234CD35500EC9884 /* CarsTableViewCell.xib */; };
 		6BF12621234CD3CA00EC9884 /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF12620234CD3CA00EC9884 /* CarsViewModel.swift */; };
-		A249B0DA234E595900BB6732 /* Json2.json in Resources */ = {isa = PBXBuildFile; fileRef = A249B0D8234E595900BB6732 /* Json2.json */; };
-		A249B0DB234E595900BB6732 /* Json1.json in Resources */ = {isa = PBXBuildFile; fileRef = A249B0D9234E595900BB6732 /* Json1.json */; };
+		A249B0DA234E595900BB6732 /* ManufacturerJson2.json in Resources */ = {isa = PBXBuildFile; fileRef = A249B0D8234E595900BB6732 /* ManufacturerJson2.json */; };
+		A249B0DB234E595900BB6732 /* ManufacturerJson1.json in Resources */ = {isa = PBXBuildFile; fileRef = A249B0D9234E595900BB6732 /* ManufacturerJson1.json */; };
 		A249B0DD234E59FC00BB6732 /* MockDataForTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A249B0DC234E59FC00BB6732 /* MockDataForTests.swift */; };
 		A25B509C2348891D00B68794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509B2348891D00B68794 /* AppDelegate.swift */; };
 		A25B509E2348891D00B68794 /* ManufacturersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B509D2348891D00B68794 /* ManufacturersViewController.swift */; };
@@ -57,6 +57,9 @@
 		A25B510F2349D5BE00B68794 /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B510E2349D5BE00B68794 /* Cars.swift */; };
 		A25B5112234BCBD400B68794 /* ManufacturerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B5111234BCBD400B68794 /* ManufacturerViewModel.swift */; };
 		A25B5114234BCC9200B68794 /* ViewModelsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B5113234BCC9200B68794 /* ViewModelsProtocol.swift */; };
+		A2AD256923505AA1002282DF /* CarsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD256823505AA1002282DF /* CarsViewModelTests.swift */; };
+		A2AD256B23505BD5002282DF /* CarsJson1.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AD256A23505BD5002282DF /* CarsJson1.json */; };
+		A2AD256D23505BDE002282DF /* CarsJson2.json in Resources */ = {isa = PBXBuildFile; fileRef = A2AD256C23505BDE002282DF /* CarsJson2.json */; };
 		A2C46E62234D02BE0061F94B /* Manufacturers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2C46E61234D02BE0061F94B /* Manufacturers.storyboard */; };
 		BD91352224A9ADFB7EDF4D1C /* Pods_Auto1CarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2751C18EE4385C3DA9C8AA3D /* Pods_Auto1CarsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -98,8 +101,8 @@
 		6BF1261C234CD35500EC9884 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
 		6BF1261D234CD35500EC9884 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
 		6BF12620234CD3CA00EC9884 /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
-		A249B0D8234E595900BB6732 /* Json2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Json2.json; sourceTree = "<group>"; };
-		A249B0D9234E595900BB6732 /* Json1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Json1.json; sourceTree = "<group>"; };
+		A249B0D8234E595900BB6732 /* ManufacturerJson2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ManufacturerJson2.json; sourceTree = "<group>"; };
+		A249B0D9234E595900BB6732 /* ManufacturerJson1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ManufacturerJson1.json; sourceTree = "<group>"; };
 		A249B0DC234E59FC00BB6732 /* MockDataForTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataForTests.swift; sourceTree = "<group>"; };
 		A25B50982348891D00B68794 /* Auto1Cars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auto1Cars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25B509B2348891D00B68794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +143,9 @@
 		A25B510E2349D5BE00B68794 /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 		A25B5111234BCBD400B68794 /* ManufacturerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufacturerViewModel.swift; sourceTree = "<group>"; };
 		A25B5113234BCC9200B68794 /* ViewModelsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsProtocol.swift; sourceTree = "<group>"; };
+		A2AD256823505AA1002282DF /* CarsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModelTests.swift; sourceTree = "<group>"; };
+		A2AD256A23505BD5002282DF /* CarsJson1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CarsJson1.json; sourceTree = "<group>"; };
+		A2AD256C23505BDE002282DF /* CarsJson2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CarsJson2.json; sourceTree = "<group>"; };
 		A2C46E61234D02BE0061F94B /* Manufacturers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Manufacturers.storyboard; sourceTree = "<group>"; };
 		B33765FB7F1FC8E108DEBADD /* Pods-Auto1Cars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1Cars.release.xcconfig"; path = "Target Support Files/Pods-Auto1Cars/Pods-Auto1Cars.release.xcconfig"; sourceTree = "<group>"; };
 		BB17F2B0440B69FE153DB931 /* Pods-Auto1CarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Auto1CarsTests.release.xcconfig"; path = "Target Support Files/Pods-Auto1CarsTests/Pods-Auto1CarsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,8 +224,10 @@
 			isa = PBXGroup;
 			children = (
 				A25B50B22348892000B68794 /* Info.plist */,
-				A249B0D9234E595900BB6732 /* Json1.json */,
-				A249B0D8234E595900BB6732 /* Json2.json */,
+				A249B0D9234E595900BB6732 /* ManufacturerJson1.json */,
+				A249B0D8234E595900BB6732 /* ManufacturerJson2.json */,
+				A2AD256A23505BD5002282DF /* CarsJson1.json */,
+				A2AD256C23505BDE002282DF /* CarsJson2.json */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 				A25B50B02348892000B68794 /* AuthenticationBuilderTests.swift */,
 				6B9478D4234B6C5500AEE50F /* NetworkManagerTests.swift */,
 				6B81F11A234E29F400B37286 /* ManufacturerViewModelTests.swift */,
+				A2AD256823505AA1002282DF /* CarsViewModelTests.swift */,
 			);
 			path = Auto1CarsTests;
 			sourceTree = "<group>";
@@ -573,8 +582,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A249B0DA234E595900BB6732 /* Json2.json in Resources */,
-				A249B0DB234E595900BB6732 /* Json1.json in Resources */,
+				A249B0DA234E595900BB6732 /* ManufacturerJson2.json in Resources */,
+				A2AD256B23505BD5002282DF /* CarsJson1.json in Resources */,
+				A249B0DB234E595900BB6732 /* ManufacturerJson1.json in Resources */,
+				A2AD256D23505BDE002282DF /* CarsJson2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +733,7 @@
 			files = (
 				6B81F11B234E29F400B37286 /* ManufacturerViewModelTests.swift in Sources */,
 				6B9478D5234B6C5500AEE50F /* NetworkManagerTests.swift in Sources */,
+				A2AD256923505AA1002282DF /* CarsViewModelTests.swift in Sources */,
 				A25B50B12348892000B68794 /* AuthenticationBuilderTests.swift in Sources */,
 				A249B0DD234E59FC00BB6732 /* MockDataForTests.swift in Sources */,
 			);

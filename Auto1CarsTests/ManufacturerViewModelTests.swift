@@ -17,7 +17,7 @@ class ManufacturerViewModelTests: XCTestCase
     override func setUp()
     {
         viewModel = ManufacturersViewModel(delegate: self)
-        manufacturer = MockDataForTests.getJsonToManufacturer(jsonName: .Json1)
+        manufacturer = MockDataForTests.getJsonToManufacturer(jsonName: .ManufacturerJson1)
         viewModel.manufacturers = manufacturer
     }
     
@@ -37,6 +37,16 @@ class ManufacturerViewModelTests: XCTestCase
     {
         XCTAssertEqual(viewModel.numberOfRows, manufacturer.wkda?.count)
     }
+    func testPagination()
+    {
+        XCTAssertEqual(viewModel.nextPage, 1)
+        guard let newData = MockDataForTests.getJsonToManufacturer(jsonName: .ManufacturerJson2) else {
+            fatalError("couldn't load josn 2")
+        }
+        viewModel.set(newManufacturer: newData)
+        XCTAssertNil(viewModel.nextPage)
+    }
+
 }
 
 extension ManufacturerViewModelTests: ManufacturerViewModelProtocol

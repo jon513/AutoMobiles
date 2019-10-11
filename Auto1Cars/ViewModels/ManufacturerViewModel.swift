@@ -52,10 +52,9 @@ class ManufacturersViewModel: NSObject
         guard manufacturers != nil else { return 0 }
         guard let currentPage = manufacturers?.page,
             let totalPageCount = manufacturers?.totalPageCount,
-            currentPage < totalPageCount else {
+            currentPage + 1 < totalPageCount else {
                 return nil
         }
-        
         return currentPage + 1
     }
         

@@ -49,7 +49,7 @@ class CarsViewModel: NSObject
         guard let currentCars = cars else { return 0 }
         guard let currentPage = currentCars.page,
             let totalPageCount = currentCars.totalPageCount,
-            currentPage < totalPageCount else {
+            currentPage + 1 < totalPageCount else {
                 return nil
         }
         return currentPage + 1
