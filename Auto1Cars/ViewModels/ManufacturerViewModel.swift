@@ -38,6 +38,10 @@ class ManufacturersViewModel: NSObject
         self.delegate.update()
     }
     
+    var isListEmpty:Bool {
+        return numberOfRows < 1
+    }
+    
     var nextPage: Int? {
         guard manufacturers != nil else { return 0 }
         guard let currentPage = manufacturers?.page,

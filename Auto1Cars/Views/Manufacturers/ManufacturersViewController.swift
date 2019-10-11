@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ManufacturersViewController: UIViewController
+class ManufacturersViewController: MasterViewController
 {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -27,25 +27,31 @@ class ManufacturersViewController: UIViewController
         viewModel = ManufacturersViewModel(delegate: self)
         
         ManufacturerTableViewCell.registerSelf(inTableView: tableView)
+        showEmptyState(type: .fetchingData)
         fetchDataFromServer()
     }
     
     //MARK: - Methods
         
+    
     func fetchDataFromServer()
     {
         guard let nextPage = viewModel.nextPage else { return }
         Logger.log.info("Next page --------> \(nextPage)")
-        networkManager.getManufacturers(forPage: nextPage) { [weak self] (manufacturers, error) in
+        networkManager.getManufacturers(forPage: nextPage) { [unowned self] (manufacturers, error) in
             
             DispatchQueue.main.async {
+                self.hideEmpyState()
                 guard error == nil, let newManufacturer = manufacturers else {
                     Logger.log.error(error ?? "")
                     let errorAlert = MessageUtility.createASimpleAlert(title: "Error", message: error ?? ManufacturersViewModel.generalErrorMessage)
-                    self?.present(errorAlert, animated: true)
+                    self.present(errorAlert, animated: true)
+                    if self.viewModel.isListEmpty {
+                        self.showEmptyState(type: .cars)
+                    }
                     return
                 }
-                self?.viewModel.set(newManufacturer: newManufacturer)
+                self.viewModel.set(newManufacturer: newManufacturer)
             }
         }
     }

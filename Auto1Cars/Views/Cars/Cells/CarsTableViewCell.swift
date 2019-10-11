@@ -14,7 +14,7 @@ class CarsTableViewCell: UITableViewCell, NibLoadableProtocol
     @IBOutlet weak var nameLabel: UILabel! {
         didSet {
             nameLabel.font = .boldSystemFont(ofSize: 18)
-            nameLabel.textColor = .systemBlue
+            nameLabel.textColor = .systemTeal
         }
     }
     

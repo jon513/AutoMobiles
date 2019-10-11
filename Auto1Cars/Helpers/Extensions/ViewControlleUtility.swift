@@ -13,7 +13,7 @@ import UIKit
 class MasterViewController: UIViewController
 {
     public enum Empty {
-        case home, fetchingData
+        case cars, fetchingData
     }
     
     public var screenName = ""
@@ -48,7 +48,7 @@ class MasterViewController: UIViewController
         
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        messageLabel.textColor = UIColor.brown
+        messageLabel.textColor = .systemBlue
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
         
@@ -88,9 +88,11 @@ class MasterViewController: UIViewController
     
     public func showEmptyState(type: Empty) {
         switch type {
-        case .home:
+        case .cars:
             titlelabel.text = "There is a problem!"
             messageLabel.text = "Please try again later"
+            imageView.image = #imageLiteral(resourceName: "diagnostic")
+            
         case .fetchingData:
             titlelabel.text = "Loading .... "
             messageLabel.text = "Please Wait!"
